@@ -2,10 +2,10 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#f8f8f8]">
+    <div className="bg-background">
       <div className="py-6 container flex justify-between items-center">
         <div>
-          <ul className="flex gap-x-8 text-2xl">
+          <ul className="flex gap-x-8 text-2xl text-primary">
             <li className="cursor-pointer">About Me</li>
             <li className="cursor-pointer">Portfolio</li>
             <li className="cursor-pointer">Service</li>
@@ -13,7 +13,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <button className="flex items-center text-2xl cursor-pointer">
+          <button className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline">
             Book A Call <MdOutlineArrowOutward />
           </button>
         </div>

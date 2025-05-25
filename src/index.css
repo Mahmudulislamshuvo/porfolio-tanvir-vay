@@ -4,3 +4,10 @@
   width: 1280px;
   margin: 0 auto;
 }
+
+@theme {
+  --color-background: #f8f8f8;
+  --color-primary: #222222;
+  --color-secondary: #7b7b7b;
+  --color-white: #fff;
+}

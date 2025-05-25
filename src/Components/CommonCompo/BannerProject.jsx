@@ -4,7 +4,7 @@ const BannerProject = ({
 }) => {
   return (
     <div>
-      <h4 className="text-6xl">{title}</h4>
+      <h4 className="text-5xl">{title}</h4>
       <p className="text-xl pl-5 pt-2">{description}</p>
     </div>
   );
