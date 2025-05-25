@@ -1,9 +1,11 @@
-import LaptopScreen from "./Components/LaptopScreen";
+import Banner from "./Components/Banner";
+import Navbar from "./Components/Navbar";
 
 const App = () => {
   return (
     <div>
-      <LaptopScreen />
+      <Navbar />
+      <Banner />
     </div>
   );
 };
