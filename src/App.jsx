@@ -1,5 +1,6 @@
 import AboutMe from "./Components/AboutMe";
 import Banner from "./Components/Banner";
+import Experiences from "./Components/Experiences";
 import Navbar from "./Components/Navbar";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar />
       <Banner />
       <AboutMe />
+      <Experiences />
     </div>
   );
 };

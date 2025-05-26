@@ -70,6 +70,7 @@ const ReactSlider = () => {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 3,
+    slidesToScroll: 1,
     speed: 500,
     responsive: [
       {
