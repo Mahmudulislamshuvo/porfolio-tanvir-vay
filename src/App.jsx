@@ -1,3 +1,4 @@
+import AboutMe from "./Components/AboutMe";
 import Banner from "./Components/Banner";
 import Navbar from "./Components/Navbar";
 
@@ -6,6 +7,7 @@ const App = () => {
     <div>
       <Navbar />
       <Banner />
+      <AboutMe />
     </div>
   );
 };
