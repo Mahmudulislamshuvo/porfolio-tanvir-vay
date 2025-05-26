@@ -30,6 +30,7 @@ const Blogs = () => {
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, exercitationem.",
     },
   ];
+
   return (
     <div className="bg-background py-[100px]">
       <div className="container">
@@ -51,9 +52,9 @@ const Blogs = () => {
                 />
                 <div className="pt-8">
                   <div className="flex items-center gap-x-5">
-                    <p className="bg-primary text-white px-[10px] py-[5px] inline-block rounded-4xl">
+                    <button className="bg-primary text-white px-[10px] py-[5px] inline-block rounded-4xl">
                       {item.button}
-                    </p>
+                    </button>
                     <p className="font-bold text-primary">{item.title}</p>
                   </div>
                   <p className="text-primary pt-4">{item.description}</p>
