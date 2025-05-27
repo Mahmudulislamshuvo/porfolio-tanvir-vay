@@ -4,11 +4,11 @@ import { MdOutlineArrowDownward } from "react-icons/md";
 
 const Banner = () => {
   return (
-    <div className="bg-background">
+    <div className="bg-background pt-[80px]">
       <div className="container">
-        <div className="pb-[200px] flex">
+        <div className="pb-[200px] flex relative">
           {/* line */}
-          <div className="w-[3px] h-[400px] bg-secondary relative mt-[150px]">
+          <div className="w-[2px] h-[400px] bg-[#ededed] relative mt-[150px]">
             {/* If you chnage amount of latter it will break design */}
             <p className="origin-top-left -rotate-90 transform -translate-x-[50%] whitespace-nowrap absolute top-[-15px] left-12">
               Product Designer
