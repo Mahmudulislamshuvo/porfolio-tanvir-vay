@@ -1,6 +1,7 @@
 import BannerProject from "./CommonCompo/BannerProject";
 import bannerimg from "../assets/bannerpic.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
+import ProfileImage from "./CommonCompo/ProfileImage";
 
 const Banner = () => {
   return (
@@ -52,11 +53,9 @@ const Banner = () => {
               Scroll Down <MdOutlineArrowDownward />
             </button>
           </div>
-          <img
-            className="absolute top-0 right-0 w-[55%]"
-            src={bannerimg}
-            alt="bannerimg"
-          />
+          <div className="absolute top-0 right-0 flex justify-end w-[55%]">
+            <ProfileImage imgSrc={bannerimg} alt="bannerimg" />
+          </div>
         </div>
       </div>
     </div>
