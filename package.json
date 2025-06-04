@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:production": "NODE_ENV=production vite build",
+    "serve": "vite preview --host 0.0.0.0 --port 3000",
+    "docker:build": "docker build -t portfolio-next .",
+    "docker:run": "docker run -p 3000:80 portfolio-next"
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",
