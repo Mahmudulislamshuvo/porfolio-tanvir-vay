@@ -7,7 +7,7 @@ const Banner = ({ scrollToSection, footerRef }) => {
   return (
     <div className="bg-background pt-[80px]">
       <div className="container">
-        <div className="pb-[200px] flex relative">
+        <div className="pb-[100px] flex relative">
           {/* line */}
           <div className="w-[2px] h-[400px] bg-[#ededed] relative mt-[200px]">
             <p

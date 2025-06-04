@@ -5,7 +5,7 @@ import Slider from "./CommonCompo/Slider";
 
 const AboutMe = () => {
   return (
-    <div className="bg-background pb-5">
+    <div className="bg-background pb-5 pt-[80px]">
       <div className="container">
         <div className="flex">
           <div className="w-[35%] px-10 py-3">

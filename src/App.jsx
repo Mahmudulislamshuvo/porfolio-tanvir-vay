@@ -21,6 +21,7 @@ const App = () => {
   const latestWorkRef = useRef(null);
   const blogsRef = useRef(null);
   const footerRef = useRef(null);
+  const homeRef = useRef(null);
 
   // Scroll to section when clicking on navbar items
   const scrollToSection = (ref) => {
@@ -30,14 +31,16 @@ const App = () => {
   return (
     <div>
       <div data-aos="fade-up">Your animated content</div>
-      <Navbar
-        scrollToSection={scrollToSection}
-        aboutMeRef={aboutMeRef}
-        experiencesRef={experiencesRef}
-        consultationRef={consultationRef}
-        latestWorkRef={latestWorkRef}
-        blogsRef={blogsRef}
-      />
+      <section ref={homeRef}>
+        <Navbar
+          scrollToSection={scrollToSection}
+          aboutMeRef={aboutMeRef}
+          experiencesRef={experiencesRef}
+          consultationRef={consultationRef}
+          latestWorkRef={latestWorkRef}
+          blogsRef={blogsRef}
+        />
+      </section>
 
       <Banner scrollToSection={scrollToSection} footerRef={footerRef} />
 
@@ -63,7 +66,15 @@ const App = () => {
 
       <GotAVision />
       <section ref={footerRef}>
-        <Footer />
+        <Footer
+          scrollToSection={scrollToSection}
+          aboutMeRef={aboutMeRef}
+          experiencesRef={experiencesRef}
+          consultationRef={consultationRef}
+          latestWorkRef={latestWorkRef}
+          blogsRef={blogsRef}
+          homeRef={homeRef}
+        />
       </section>
     </div>
   );
