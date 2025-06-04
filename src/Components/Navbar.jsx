@@ -11,7 +11,7 @@ const Navbar = ({
   return (
     <nav className="bg-white border-b-[2px] border-[#ededed] fixed w-full top-0 z-50">
       <div className="bg-background">
-        <div className="py-6 container flex justify-between items-center">
+        <div className="py-3 container flex justify-between items-center">
           <div className="flex items-center gap-x-[100px]">
             <div className="text-4xl">Logo</div>
             <ul className="flex gap-x-8 text-lg text-primary">

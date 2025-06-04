@@ -20,6 +20,7 @@ const App = () => {
   const consultationRef = useRef(null);
   const latestWorkRef = useRef(null);
   const blogsRef = useRef(null);
+  const footerRef = useRef(null);
 
   // Scroll to section when clicking on navbar items
   const scrollToSection = (ref) => {
@@ -38,7 +39,7 @@ const App = () => {
         blogsRef={blogsRef}
       />
 
-      <Banner />
+      <Banner scrollToSection={scrollToSection} footerRef={footerRef} />
 
       <section ref={aboutMeRef}>
         <AboutMe />
@@ -61,8 +62,9 @@ const App = () => {
       </section>
 
       <GotAVision />
-
-      <Footer />
+      <section ref={footerRef}>
+        <Footer />
+      </section>
     </div>
   );
 };
