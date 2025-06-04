@@ -3,11 +3,11 @@ import bannerimg from "../assets/mainBanner.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import ProfileImage from "./CommonCompo/ProfileImage";
 
-const Banner = () => {
+const Banner = ({ scrollToSection, footerRef }) => {
   return (
     <div className="bg-background pt-[80px]">
       <div className="container">
-        <div className="pb-[200px] flex relative">
+        <div className="pb-[100px] flex relative">
           {/* line */}
           <div className="w-[2px] h-[400px] bg-[#ededed] relative mt-[200px]">
             <p
@@ -49,7 +49,10 @@ const Banner = () => {
                 <p className="text-2xl pl-4">--This is Mr. xxx</p>
               </div>
             </div>
-            <button className="flex items-center gap-x-3 text-secondary text-2xl mt-[130px]">
+            <button
+              onClick={() => scrollToSection(footerRef)}
+              className="flex items-center gap-x-3 text-secondary text-2xl mt-[130px]"
+            >
               Scroll Down <MdOutlineArrowDownward />
             </button>
           </div>

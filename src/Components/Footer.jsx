@@ -1,14 +1,19 @@
-import { useState } from "react";
-
-const Footer = () => {
-  const [activeLink, setActiveLink] = useState("home");
-
+const Footer = ({
+  aboutMeRef,
+  experiencesRef,
+  consultationRef,
+  latestWorkRef,
+  blogsRef,
+  homeRef,
+  scrollToSection,
+}) => {
   const links = [
-    { name: "Home", id: "home" },
-    { name: "About Me", id: "about" },
-    { name: "Portfolio", id: "portfolio" },
-    { name: "Services", id: "services" },
-    { name: "Blog", id: "blog" },
+    { name: "Home", id: "home", ref: homeRef },
+    { name: "About Me", id: "about", ref: aboutMeRef },
+    { name: "Portfolio", id: "portfolio", ref: latestWorkRef },
+    { name: "Experiences", id: "experiences", ref: experiencesRef },
+    { name: "Services", id: "services", ref: consultationRef },
+    { name: "Blog", id: "blog", ref: blogsRef },
   ];
 
   return (
@@ -19,12 +24,8 @@ const Footer = () => {
             {links.map((link) => (
               <li
                 key={link.id}
-                onClick={() => setActiveLink(link.id)}
-                className={`cursor-pointer ${
-                  activeLink === link.id
-                    ? "bg-white text-primary py-2 px-4 rounded-lg"
-                    : "py-2 px-4"
-                }`}
+                onClick={() => scrollToSection(link.ref)} // Scroll to the corresponding section
+                className="cursor-pointer py-2 px-4 hover:bg-white hover:text-primary rounded-lg transition-colors duration-300"
               >
                 {link.name}
               </li>

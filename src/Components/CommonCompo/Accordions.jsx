@@ -6,7 +6,6 @@ import {
 } from "@material-tailwind/react";
 import { GoDotFill } from "react-icons/go";
 import { MdArrowOutward } from "react-icons/md";
-import ExperiencesSilder from "./ExperiencesSilder";
 import ExperiencesSlider from "./ExperiencesSilder";
 
 function Icon({ id, open }) {
@@ -36,7 +35,7 @@ export default function AccordionCustomIcon({ experienceData }) {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="w-full mx-auto py-8">
       {experienceData.map((project) => (
         <Accordion
           key={project.id}
@@ -45,7 +44,7 @@ export default function AccordionCustomIcon({ experienceData }) {
           className="group mb-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
         >
           <div className="bg-white rounded-2xl p-8">
-            <AccordionHeader
+            {/* <AccordionHeader
               onClick={() => handleOpen(project.id)}
               className="border-none hover:bg-transparent p-0"
             >
@@ -57,13 +56,13 @@ export default function AccordionCustomIcon({ experienceData }) {
                       {project.period}
                     </span>
                   </div>
-                  <h3 className="mt-2 text-3xl font-bold text-gray-900 hover:text-primary transition-colors duration-300">
+                  <h3 className="mt-2 text-3xl font-bold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
                     {project.title}
                   </h3>
                 </div>
 
                 <div className="md:col-span-4">
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="text-lg text-gray-600 leading-relaxed text-start">
                     {project.description}
                   </p>
                 </div>
@@ -79,6 +78,44 @@ export default function AccordionCustomIcon({ experienceData }) {
                       </span>
                     ))}
                   </div>
+                </div>
+              </div>
+            </AccordionHeader> */}
+            <AccordionHeader
+              onClick={() => handleOpen(project.id)}
+              className="border-none hover:bg-transparent p-0"
+            >
+              <div className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                <div className="flex w-[70%] gap-x-5">
+                  {/* Title */}
+                  <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-[16px] text-gray-700 leading-relaxed text-start mt-2 md:mt-0">
+                    {project.description}
+                  </p>
+
+                  {/* Date */}
+                  <div className="flex items-start space-x-2 mt-3">
+                    <GoDotFill className="text-primary shrink-0" />
+                    <span className="text-sm font-medium text-gray-500 tracking-wide">
+                      {project.period}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Buttons */}
+                <div className="flex mt-6 gap-4 w-[25%]">
+                  {/* Learn More Button */}
+                  <button className="px-5 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105">
+                    Learn More
+                  </button>
+                  {/* Contact Us Button */}
+                  <button className="px-5 py-3 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105">
+                    Contact Us
+                  </button>
                 </div>
               </div>
             </AccordionHeader>
