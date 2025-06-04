@@ -8,13 +8,27 @@ const Banner = () => {
       <div className="container">
         <div className="pb-[200px] flex relative">
           {/* line */}
-          <div className="w-[2px] h-[400px] bg-[#ededed] relative mt-[150px]">
-            {/* If you chnage amount of latter it will break design */}
-            <p className="origin-top-left -rotate-90 transform -translate-x-[50%] whitespace-nowrap absolute top-[-15px] left-12">
+          <div className="w-[2px] h-[400px] bg-[#ededed] relative mt-[200px]">
+            <p
+              className="absolute whitespace-nowrap"
+              style={{
+                top: "-15px",
+                left: "-11px",
+                transform: "rotate(-90deg)",
+                transformOrigin: "top left",
+              }}
+            >
               Product Designer
             </p>
-
-            <p className="-rotate-90 transform -translate-x-[50%] whitespace-nowrap absolute bottom-[-40px] right-[-8]">
+            <p
+              className="absolute whitespace-nowrap"
+              style={{
+                bottom: "-15px",
+                right: "-11px",
+                transform: "rotate(-90deg)",
+                transformOrigin: "bottom right",
+              }}
+            >
               2024
             </p>
           </div>

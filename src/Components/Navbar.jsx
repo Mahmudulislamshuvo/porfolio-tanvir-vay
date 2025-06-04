@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="py-6 container flex justify-between items-center">
           <div className="flex items-center gap-x-[100px]">
             <div className="text-4xl">Logo</div>
-            <ul className="flex gap-x-8 text-2xl text-primary">
+            <ul className="flex gap-x-8 text-lg text-primary">
               <li className="cursor-pointer">About Me</li>
               <li className="cursor-pointer">Portfolio</li>
               <li className="cursor-pointer">Service</li>
