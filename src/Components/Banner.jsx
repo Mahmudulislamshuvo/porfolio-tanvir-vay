@@ -1,5 +1,5 @@
 import BannerProject from "./CommonCompo/BannerProject";
-import bannerimg from "../assets/bannerpic.png";
+import bannerimg from "../assets/mainBanner.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import ProfileImage from "./CommonCompo/ProfileImage";
 
