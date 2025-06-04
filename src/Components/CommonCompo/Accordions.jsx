@@ -85,7 +85,7 @@ export default function AccordionCustomIcon({ experienceData }) {
               onClick={() => handleOpen(project.id)}
               className="border-none hover:bg-transparent p-0"
             >
-              <div className="flex flex-col md:flex-row gap-6 items-start  justify-between">
+              <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
                 <div className="flex w-[70%] gap-x-5">
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
@@ -108,13 +108,23 @@ export default function AccordionCustomIcon({ experienceData }) {
 
                 {/* Buttons */}
                 <div className="flex gap-4 w-[25%] items-start justify-start">
-                  <button className="px-5 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105">
+                  <div
+                    className="px-5 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105 cursor-pointer"
+                    onClick={() => {
+                      /* Handle "Learn More" click */
+                    }}
+                  >
                     Learn More
-                  </button>
+                  </div>
 
-                  <button className="px-5 py-3 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105">
+                  <div
+                    className="px-5 py-3 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105 cursor-pointer"
+                    onClick={() => {
+                      /* Handle "Contact Us" click */
+                    }}
+                  >
                     Contact Us
-                  </button>
+                  </div>
                 </div>
               </div>
             </AccordionHeader>
