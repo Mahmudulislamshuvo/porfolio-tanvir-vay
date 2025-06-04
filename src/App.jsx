@@ -1,6 +1,7 @@
 import AboutMe from "./Components/AboutMe";
 import Banner from "./Components/Banner";
 import Blogs from "./Components/Blogs";
+import Test from "./Components/CommonCompo/Accordions";
 import Slider from "./Components/CommonCompo/Slider";
 import Consultation from "./Components/Consultation";
 import Experiences from "./Components/Experiences";

@@ -6,6 +6,8 @@ import {
 } from "@material-tailwind/react";
 import { GoDotFill } from "react-icons/go";
 import { MdArrowOutward } from "react-icons/md";
+import ExperiencesSilder from "./ExperiencesSilder";
+import ExperiencesSlider from "./ExperiencesSilder";
 
 function Icon({ id, open }) {
   return (
@@ -33,7 +35,6 @@ export default function AccordionCustomIcon({ experienceData }) {
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
-  // If you like it I'll map here and it will reduce codes
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {experienceData.map((project) => (
@@ -84,20 +85,15 @@ export default function AccordionCustomIcon({ experienceData }) {
 
             <AccordionBody className="pt-8 px-0">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div className="grid grid-cols-3 gap-6">
-                  {project.content.images.map((img, idx) => (
-                    <div
-                      key={idx}
-                      className="relative overflow-hidden rounded-xl aspect-square transform transition-transform duration-300 hover:scale-105"
-                    >
-                      <img
-                        src={img}
-                        alt={`Project ${idx + 1}`}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  ))}
+                <div className="relative">
+                  <ExperiencesSlider
+                    images={project.content.images}
+                    slideWidth={200}
+                    slideHeight={200}
+                    imgWidth={180}
+                    imgHeight={150}
+                    arrowSize={30}
+                  />
                 </div>
 
                 <div className="flex flex-col justify-between">

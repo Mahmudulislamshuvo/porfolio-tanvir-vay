@@ -15,7 +15,7 @@ const Footer = () => {
     <div className="bg-primary py-[70px]">
       <div className="container">
         <div className="flex flex-col lg:flex-row justify-between items-center">
-          <ul className="flex gap-8 text-white">
+          <ul className="flex gap-8 text-white pt-5">
             {links.map((link) => (
               <li
                 key={link.id}
@@ -23,7 +23,7 @@ const Footer = () => {
                 className={`cursor-pointer ${
                   activeLink === link.id
                     ? "bg-white text-primary py-2 px-4 rounded-lg"
-                    : ""
+                    : "py-2 px-4"
                 }`}
               >
                 {link.name}

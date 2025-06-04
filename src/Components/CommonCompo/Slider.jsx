@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { MdArrowOutward, MdKeyboardArrowLeft } from "react-icons/md";
@@ -73,7 +73,7 @@ export default function Slider() {
   const [swiperReady, setSwiperReady] = useState(false);
 
   useEffect(() => {
-    setSwiperReady(true); // after first render, refs exist, enable swiper init
+    setSwiperReady(true);
   }, []);
 
   return (
@@ -117,13 +117,13 @@ export default function Slider() {
       {/* 3. Attach refs to buttons */}
       <div
         ref={prevRef}
-        className="custom-swiper-button-prev h-20 w-20 rounded-full bg-secondary text-white flex justify-center items-center cursor-pointer absolute top-1/2 left-[-80px] -translate-y-1/2 z-10"
+        className="custom-swiper-button-prev h-15 w-15 rounded-full bg-secondary text-white flex justify-center items-center cursor-pointer absolute top-[45%] left-5 -translate-y-1/2 z-10"
       >
         <MdKeyboardArrowLeft className="text-3xl" />
       </div>
       <div
         ref={nextRef}
-        className="custom-swiper-button-next h-20 w-20 rounded-full bg-secondary text-white flex justify-center items-center cursor-pointer absolute top-1/2 right-[-90px] -translate-y-1/2 z-10"
+        className="custom-swiper-button-next h-15 w-15 rounded-full bg-secondary text-white flex justify-center items-center cursor-pointer absolute top-[45%] right-0 -translate-y-1/2 z-10"
       >
         <RiArrowRightSLine className="text-3xl" />
       </div>

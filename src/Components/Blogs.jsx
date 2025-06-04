@@ -50,7 +50,7 @@ const Blogs = () => {
                   src={item.avatar}
                   alt="Pic"
                 />
-                <div className="pt-8">
+                <div className="py-7 px-5">
                   <div className="flex items-center gap-x-5">
                     <button className="bg-primary text-white px-[10px] py-[5px] inline-block rounded-4xl">
                       {item.button}
