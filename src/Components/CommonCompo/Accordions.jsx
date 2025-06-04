@@ -85,7 +85,7 @@ export default function AccordionCustomIcon({ experienceData }) {
               onClick={() => handleOpen(project.id)}
               className="border-none hover:bg-transparent p-0"
             >
-              <div className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+              <div className="flex flex-col md:flex-row gap-6 items-start  justify-between">
                 <div className="flex w-[70%] gap-x-5">
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
@@ -98,21 +98,20 @@ export default function AccordionCustomIcon({ experienceData }) {
                   </p>
 
                   {/* Date */}
-                  <div className="flex items-start space-x-2 mt-3">
+                  <div className="flex items-start space-x-2 test-start justify-start">
                     <GoDotFill className="text-primary shrink-0" />
-                    <span className="text-sm font-medium text-gray-500 tracking-wide">
+                    <span className="text-sm font-medium text-gray-500 tracking-wide text-start">
                       {project.period}
                     </span>
                   </div>
                 </div>
 
                 {/* Buttons */}
-                <div className="flex mt-6 gap-4 w-[25%]">
-                  {/* Learn More Button */}
+                <div className="flex gap-4 w-[25%] items-start justify-start">
                   <button className="px-5 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105">
                     Learn More
                   </button>
-                  {/* Contact Us Button */}
+
                   <button className="px-5 py-3 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105">
                     Contact Us
                   </button>
