@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import AboutMe from "./Components/AboutMe";
 import Banner from "./Components/Banner";
-import Blogs from "./Components/Blogs";
+// import Blogs from "./Components/Blogs";
 // import Consultation from "./Components/Consultation";
 import Experiences from "./Components/Experiences";
 import Footer from "./Components/Footer";
@@ -20,9 +20,9 @@ const App = () => {
   const aboutMeRef = useRef(null);
   const academicsRef = useRef(null);
   const experiencesRef = useRef(null);
+  const researchRef = useRef(null);
   const publicationsRef = useRef(null);
-  const latestWorkRef = useRef(null);
-  const blogsRef = useRef(null);
+  // const blogsRef = useRef(null);
   const footerRef = useRef(null);
   const homeRef = useRef(null);
 
@@ -41,8 +41,8 @@ const App = () => {
           academicsRef={academicsRef}
           experiencesRef={experiencesRef}
           publicationsRef={publicationsRef}
-          latestWorkRef={latestWorkRef}
-          blogsRef={blogsRef}
+          researchRef={researchRef}
+          // blogsRef={blogsRef}
         />
       </section>
 
@@ -60,17 +60,17 @@ const App = () => {
         <Experiences />
       </section>
 
+      <section ref={researchRef}>
+        <LatestWork />
+      </section>
+
       <section ref={publicationsRef}>
         <Publication />
       </section>
 
-      <section ref={latestWorkRef}>
-        <LatestWork />
-      </section>
-
-      <section ref={blogsRef}>
+      {/* <section ref={blogsRef}>
         <Blogs />
-      </section>
+      </section> */}
 
       <GotAVision />
       <section ref={footerRef}>
@@ -79,8 +79,8 @@ const App = () => {
           aboutMeRef={aboutMeRef}
           experiencesRef={experiencesRef}
           publicationsRef={publicationsRef}
-          latestWorkRef={latestWorkRef}
-          blogsRef={blogsRef}
+          researchRef={researchRef}
+          // blogsRef={blogsRef}
           homeRef={homeRef}
         />
       </section>

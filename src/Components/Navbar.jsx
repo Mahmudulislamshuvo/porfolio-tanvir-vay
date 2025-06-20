@@ -8,8 +8,7 @@ const Navbar = ({
   academicsRef,
   experiencesRef,
   publicationsRef,
-  latestWorkRef,
-  blogsRef,
+  researchRef,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -39,17 +38,25 @@ const Navbar = ({
                 </button>
               </li>
               <li>
+                <button onClick={() => scrollToSection(researchRef)}>
+                  Research
+                </button>
+              </li>
+              <li>
                 <button onClick={() => scrollToSection(publicationsRef)}>
                   Publications
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection(latestWorkRef)}>
-                  Latest Work
+                <button>
+                  <a
+                    href="https://tinyurl.com/5bhsaepm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Feature & Electronic Media
+                  </a>
                 </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection(blogsRef)}>Blogs</button>
               </li>
             </ul>
           </div>
@@ -88,12 +95,9 @@ const Navbar = ({
               </li>
 
               <li>
-                <button onClick={() => scrollToSection(latestWorkRef)}>
-                  Latest Work
+                <button onClick={() => scrollToSection(researchRef)}>
+                  Research
                 </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection(blogsRef)}>Blogs</button>
               </li>
             </ul>
             <div className="flex justify-center mt-4">
