@@ -7,6 +7,7 @@ const Navbar = ({
   aboutMeRef,
   academicsRef,
   experiencesRef,
+  publicationsRef,
   latestWorkRef,
   blogsRef,
 }) => {
@@ -35,6 +36,11 @@ const Navbar = ({
               <li>
                 <button onClick={() => scrollToSection(experiencesRef)}>
                   Experiences
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection(publicationsRef)}>
+                  Publications
                 </button>
               </li>
               <li>

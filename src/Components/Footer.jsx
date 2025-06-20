@@ -1,7 +1,7 @@
 const Footer = ({
   aboutMeRef,
   experiencesRef,
-  consultationRef,
+  publicationsRef,
   latestWorkRef,
   blogsRef,
   homeRef,
@@ -12,7 +12,7 @@ const Footer = ({
     { name: "About Me", id: "about", ref: aboutMeRef },
     { name: "Portfolio", id: "portfolio", ref: latestWorkRef },
     { name: "Experiences", id: "experiences", ref: experiencesRef },
-    { name: "Services", id: "services", ref: consultationRef },
+    { name: "PubLications", id: "services", ref: publicationsRef },
     { name: "Blog", id: "blog", ref: blogsRef },
   ];
 
@@ -24,7 +24,7 @@ const Footer = ({
             {links.map((link) => (
               <li
                 key={link.id}
-                onClick={() => scrollToSection(link.ref)} // Scroll to the corresponding section
+                onClick={() => scrollToSection(link.ref)}
                 className="cursor-pointer py-2 px-4 hover:bg-white hover:text-primary rounded-lg transition-colors duration-300"
               >
                 {link.name}
