@@ -1,36 +1,40 @@
 import EducationCard from "./CommonCompo/EducationCard";
+import sfsLogo from "../assets/academics/st-francis-college-seeklogo.png";
+import jahangir from "../assets/academics/jahangirnagar-university-seeklogo.png";
+import aiub from "../assets/academics/aiub-logo-white-border.svg";
+import tejgaon from "../assets/academics/tejgaon-college-dhaka-seeklogo.png";
+import monipur from "../assets/academics/monipur.png";
 
-const Education = () => {
+const Academics = () => {
   return (
-    <div className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          Education
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="container">
+      <div className="pb-[50px]">
+        <h1 className="text-center text-5xl font-bold py-[100px]">Academics</h1>
+        <div className="flex flex-wrap justify-start">
           <EducationCard
-            degree="BSC in Computer Science & Engineering"
-            institution="Daffodil International University"
-            duration="2016 - 2020"
-            icon={<i className="fas fa-graduation-cap"></i>}
+            degree="Master of Science In Information Technology (IT)"
+            institution="St Francis College, Brooklyn, New York"
+            icon={sfsLogo}
           />
           <EducationCard
-            degree="Pre-Sea Training Course (Nautical Science)"
-            institution="Academy of Marine Education & Technology"
-            duration="2013 - 2014"
-            icon={<i className="fas fa-anchor"></i>}
+            degree="Master of Science In Applied Physics & Electronics Engineering (APE)"
+            institution="Jahangirnagar University, Dhaka"
+            icon={jahangir}
           />
           <EducationCard
-            degree="Higher Secondary Certificate"
-            institution="Satkhira Government College"
-            duration="2011 - 2012"
-            icon={<i className="fas fa-school"></i>}
+            degree="Bachelor of Science In Electrical & Electronic Engineering (EEE)"
+            institution="Bangladesh University of Business & Technology, Dhaka"
+            icon={aiub}
           />
           <EducationCard
-            degree="Secondary School Certificate"
-            institution="Satkhira Government High School"
-            duration="2002 - 2010"
-            icon={<i className="fas fa-graduation-cap"></i>}
+            degree="Higher Secondary School Certificate (HSC)"
+            institution="Tejgaon College, Dhaka"
+            icon={tejgaon}
+          />
+          <EducationCard
+            degree="Secondary School Certificate (SSC)"
+            institution="Monipur High School & College, Dhaka"
+            icon={monipur}
           />
         </div>
       </div>
@@ -38,4 +42,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default Academics;

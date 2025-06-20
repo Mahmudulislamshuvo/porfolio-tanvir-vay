@@ -10,12 +10,14 @@ import LatestWork from "./Components/LatestWork";
 import Navbar from "./Components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Academics from "./Components/Academics";
 
 AOS.init();
 
 const App = () => {
   // Create refs for each section
   const aboutMeRef = useRef(null);
+  const academicsRef = useRef(null);
   const experiencesRef = useRef(null);
   const consultationRef = useRef(null);
   const latestWorkRef = useRef(null);
@@ -35,6 +37,7 @@ const App = () => {
         <Navbar
           scrollToSection={scrollToSection}
           aboutMeRef={aboutMeRef}
+          academicsRef={academicsRef}
           experiencesRef={experiencesRef}
           consultationRef={consultationRef}
           latestWorkRef={latestWorkRef}
@@ -46,6 +49,10 @@ const App = () => {
 
       <section ref={aboutMeRef}>
         <AboutMe />
+      </section>
+
+      <section ref={academicsRef}>
+        <Academics />
       </section>
 
       <section ref={experiencesRef}>
