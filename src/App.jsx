@@ -2,7 +2,7 @@ import { useRef } from "react";
 import AboutMe from "./Components/AboutMe";
 import Banner from "./Components/Banner";
 import Blogs from "./Components/Blogs";
-import Consultation from "./Components/Consultation";
+// import Consultation from "./Components/Consultation";
 import Experiences from "./Components/Experiences";
 import Footer from "./Components/Footer";
 import GotAVision from "./Components/GotAVision";
@@ -19,7 +19,7 @@ const App = () => {
   const aboutMeRef = useRef(null);
   const academicsRef = useRef(null);
   const experiencesRef = useRef(null);
-  const consultationRef = useRef(null);
+  // const consultationRef = useRef(null);
   const latestWorkRef = useRef(null);
   const blogsRef = useRef(null);
   const footerRef = useRef(null);
@@ -39,7 +39,7 @@ const App = () => {
           aboutMeRef={aboutMeRef}
           academicsRef={academicsRef}
           experiencesRef={experiencesRef}
-          consultationRef={consultationRef}
+          // consultationRef={consultationRef}
           latestWorkRef={latestWorkRef}
           blogsRef={blogsRef}
         />
@@ -59,9 +59,9 @@ const App = () => {
         <Experiences />
       </section>
 
-      <section ref={consultationRef}>
+      {/* <section ref={consultationRef}>
         <Consultation />
-      </section>
+      </section> */}
 
       <section ref={latestWorkRef}>
         <LatestWork />
@@ -77,7 +77,7 @@ const App = () => {
           scrollToSection={scrollToSection}
           aboutMeRef={aboutMeRef}
           experiencesRef={experiencesRef}
-          consultationRef={consultationRef}
+          // consultationRef={consultationRef}
           latestWorkRef={latestWorkRef}
           blogsRef={blogsRef}
           homeRef={homeRef}
