@@ -44,74 +44,30 @@ export default function AccordionCustomIcon({ experienceData }) {
           className="group mb-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
         >
           <div className="bg-white rounded-2xl p-8">
-            {/* <AccordionHeader
-              onClick={() => handleOpen(project.id)}
-              className="border-none hover:bg-transparent p-0"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <div className="md:col-span-4">
-                  <div className="flex items-center space-x-2">
-                    <GoDotFill className="text-primary shrink-0" />
-                    <span className="text-sm font-semibold text-gray-500 tracking-wide">
-                      {project.period}
-                    </span>
-                  </div>
-                  <h3 className="mt-2 text-3xl font-bold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
-                    {project.title}
-                  </h3>
-                </div>
-
-                <div className="md:col-span-4">
-                  <p className="text-lg text-gray-600 leading-relaxed text-start">
-                    {project.description}
-                  </p>
-                </div>
-
-                <div className="md:col-span-4">
-                  <div className="flex flex-wrap gap-3">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </AccordionHeader> */}
             <AccordionHeader
               onClick={() => handleOpen(project.id)}
               className="border-none hover:bg-transparent p-0"
             >
-              <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
-                <div className="flex w-[70%] gap-x-5">
+              <div className="flex flex-col md:flex-row gap-6 items-start justify-between w-full">
+                <div className="flex w-full justify-between items-center gap-x-5">
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
                     {project.title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-[16px] text-gray-700 leading-relaxed text-start mt-2 md:mt-0">
-                    {project.description}
-                  </p>
-
-                  {/* Date */}
-                  <div className="flex items-start space-x-2 test-start justify-start">
+                  {/* Period */}
+                  <div className="flex items-start space-x-2 justify-start pr-5">
                     <GoDotFill className="text-primary shrink-0" />
                     <span className="text-sm font-medium text-gray-500 tracking-wide text-start">
                       {project.period}
                     </span>
                   </div>
                 </div>
-
-                {/* Buttons */}
               </div>
             </AccordionHeader>
 
             <AccordionBody className="pt-8 px-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div className="relative">
                   <ExperiencesSlider
                     images={project.content.images}
@@ -132,7 +88,12 @@ export default function AccordionCustomIcon({ experienceData }) {
                     <MdArrowOutward className="w-5 h-5" />
                   </button>
                 </div>
-              </div>
+              </div> */}
+              <ol className="list-disc pl-5 space-y-2 text-base text-gray-800">
+                {project.orderlist.map((orderlist) => (
+                  <li key={orderlist.id}>{orderlist.task}</li>
+                ))}
+              </ol>
             </AccordionBody>
           </div>
         </Accordion>
