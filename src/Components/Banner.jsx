@@ -2,8 +2,38 @@ import BannerProject from "./CommonCompo/BannerProject";
 import bannerimg from "../assets/mainBanner.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import ProfileImage from "./CommonCompo/ProfileImage";
+import { useEffect, useState } from "react";
 
 const Banner = ({ scrollToSection, footerRef }) => {
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [speed, setSpeed] = useState(150);
+  const fullText = "Hashibul Ahsan Shoaib";
+
+  useEffect(() => {
+    let timer;
+    const handleTyping = () => {
+      if (!isDeleting) {
+        setText(fullText.substring(0, text.length + 1));
+      } else {
+        setText(fullText.substring(0, text.length - 1));
+      }
+      setSpeed(isDeleting ? 80 : 150);
+      if (!isDeleting && text === fullText) {
+        timer = setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && text === "") {
+        timer = setTimeout(() => setIsDeleting(false), 500);
+      }
+    };
+
+    if (!(text === fullText && !isDeleting) && !(text === "" && isDeleting)) {
+      timer = setTimeout(handleTyping, speed);
+    }
+
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text, isDeleting, fullText]);
+
   return (
     <div className="bg-background pt-[5%]">
       <div className="container">
@@ -20,7 +50,7 @@ const Banner = ({ scrollToSection, footerRef }) => {
                   transformOrigin: "top left",
                 }}
               >
-                Product Designer
+                IT professional
               </p>
               <p
                 className="absolute whitespace-nowrap"
@@ -31,7 +61,7 @@ const Banner = ({ scrollToSection, footerRef }) => {
                   transformOrigin: "bottom right",
                 }}
               >
-                2024
+                Researcher
               </p>
             </div>
           </div>
@@ -51,7 +81,9 @@ const Banner = ({ scrollToSection, footerRef }) => {
                 <h1 className="text-[200px] leading-none pt-10 text-4xl md:text-6xl lg:text-[200px]">
                   Hello
                 </h1>
-                <p className="text-2xl pl-4">--This is Mr. xxx</p>
+                <p className="text-2xl pl-4">
+                  --This is <span className="font-bold">{text}</span>
+                </p>
               </div>
             </div>
             <button
@@ -64,7 +96,9 @@ const Banner = ({ scrollToSection, footerRef }) => {
 
           {/* Right Section (Profile Image) */}
           <div className="absolute top-0 right-0 flex justify-end w-[55%] lg:w-1/2">
-            <ProfileImage imgSrc={bannerimg} alt="bannerimg" />
+            <img src={bannerimg} alt="bannerimg" />
+            {/* Circle design under that line, Just need to uncomment it */}
+            {/* <ProfileImage imgSrc={bannerimg} alt="bannerimg" /> */}
           </div>
         </div>
       </div>
