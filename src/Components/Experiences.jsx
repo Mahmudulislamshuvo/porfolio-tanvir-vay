@@ -60,13 +60,13 @@ const Experiences = () => {
             <div className="w-[30%]">
               <div className="flex items-center gap-x-2">
                 <span className="h-2 w-2 rounded-full bg-primary"></span>
-                <h2 className="text-xl">Experiences</h2>
+                <h2 className="text-5xl">Experiences</h2>
               </div>
-              <h3 className="text-primary text-4xl pt-5">
+              {/* <h3 className="text-primary text-4xl pt-5">
                 Explore My Design Journey
-              </h3>
+              </h3> */}
             </div>
-            <div className="w-[40%]">
+            {/* <div className="w-[40%]">
               <p className="pb-5">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
                 reprehenderit pariatur molestias dolorem maiores, fugiat tempore
@@ -80,7 +80,7 @@ const Experiences = () => {
               <button className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline">
                 Book A Call <MdOutlineArrowOutward />
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="py-[10px]">
             <Accordions experienceData={projects} />

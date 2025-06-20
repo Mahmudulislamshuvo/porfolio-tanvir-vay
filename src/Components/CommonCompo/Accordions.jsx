@@ -107,25 +107,6 @@ export default function AccordionCustomIcon({ experienceData }) {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-4 w-[25%] items-start justify-start">
-                  <div
-                    className="px-5 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105 cursor-pointer"
-                    onClick={() => {
-                      /* Handle "Learn More" click */
-                    }}
-                  >
-                    Learn More
-                  </div>
-
-                  <div
-                    className="px-5 py-3 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition-colors duration-300 text-[16px] font-semibold shadow-md transform hover:scale-105 cursor-pointer"
-                    onClick={() => {
-                      /* Handle "Contact Us" click */
-                    }}
-                  >
-                    Contact Us
-                  </div>
-                </div>
               </div>
             </AccordionHeader>
 

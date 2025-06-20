@@ -5,6 +5,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 const Navbar = ({
   scrollToSection,
   aboutMeRef,
+  academicsRef,
   experiencesRef,
   consultationRef,
   latestWorkRef,
@@ -25,6 +26,11 @@ const Navbar = ({
               <li>
                 <button onClick={() => scrollToSection(aboutMeRef)}>
                   About Me
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection(academicsRef)}>
+                  Academics
                 </button>
               </li>
               <li>
