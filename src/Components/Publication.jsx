@@ -36,6 +36,38 @@ const Publication = () => {
       publicationType: "Book chapter",
       doi: "10.1007/978-981-97-3966-0_8",
     },
+    // New entries added here
+    {
+      id: 4,
+      type: "Conference Paper",
+      title:
+        "Multi-Sense Attention Network (MSANet): Enhanced Human Activity Recognition Using Deep Learning Architectures with Self-Attention Mechanisms",
+      journal:
+        "IEEE Conference on Computing Applications and Systems, COMPAS 2024",
+      year: 2024,
+      publicationType: "Conference paper",
+      doi: "10.1145/3723178.3723226",
+    },
+    {
+      id: 5,
+      type: "Conference Paper",
+      title: "Yoga Posture Image Classification Using Big Transfer (BiT)",
+      journal:
+        "IEEE Conference on Computing Applications and Systems, COMPAS 2024",
+      year: 2024,
+      publicationType: "Conference paper",
+      doi: "10.1109/COMPAS60761.2024.10796330",
+    },
+    {
+      id: 6,
+      type: "Book Chapter",
+      title:
+        "Improved Classification of Kidney Lesions in CT Scans Using CNN with Attention Layers: Achieving High Accuracy and Performance",
+      journal: "Studies in Big Data",
+      year: 2024,
+      publicationType: "Book chapter",
+      doi: "10.1007/978-981-97-3966-0_8",
+    },
   ];
 
   return (
@@ -44,7 +76,6 @@ const Publication = () => {
         <div className="py-10">
           <div className="flex items-center justify-center">
             <div className="flex items-center gap-x-2">
-              <span className="h-2 w-2 rounded-full bg-primary"></span>
               <h2 className="text-5xl py-10 text-center">Publications</h2>
             </div>
           </div>
@@ -102,7 +133,7 @@ const Publication = () => {
                     <div className="flex items-center">
                       <LinkIcon />
                       <a
-                        href="https://doi.org/10.1007/978-981-97-3966-0_8"
+                        href={publication.doi}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors"
