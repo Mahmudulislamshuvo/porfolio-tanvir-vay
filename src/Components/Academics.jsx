@@ -9,7 +9,7 @@ const Academics = () => {
   return (
     <div className="container">
       <div className="pb-[50px]">
-        <h1 className="text-center text-5xl font-bold py-[100px]">Academics</h1>
+        <h1 className="text-center text-5xl font-bold py-[60px]">Academics</h1>
         <div className="flex flex-wrap justify-start">
           <EducationCard
             degree="Master of Science In Information Technology (IT)"
