@@ -3,9 +3,10 @@ const EducationCard = ({
   institution,
   duration = "2014-2020",
   icon,
+  group,
 }) => {
   return (
-    <div className="w-full sm:w-1/2 p-2">
+    <div className="w-full p-2">
       <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-sm transition-all duration-500 hover:shadow-lg">
         {/* Gradient border effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 transition-opacity duration-500 group-hover:opacity-20"></div>
@@ -15,16 +16,17 @@ const EducationCard = ({
           <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-blue-400 rounded-tr-2xl"></div>
         </div>
 
-        <div className="flex items-start space-x-4 p-6">
+        {/* Changed to flex-col on mobile and flex-row on larger screens */}
+        <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 p-6">
           {/* Icon with animated border */}
           <div className="relative flex-shrink-0">
             <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl blur-sm opacity-75 group-hover:opacity-100 transition-all duration-500 z-0"></div>
             <div className="relative bg-white p-2 rounded-xl shadow-md z-10">
-              <img src={icon} alt="icon" className="w-16 h-16 object-contain" />
+              <img src={icon} alt="icon" className="w-30 h-30 object-contain" />
             </div>
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full">
             {/* Degree with gradient text */}
             <h3 className="text-2xl font-bold bg-clip-text ">{degree}</h3>
 
@@ -33,6 +35,9 @@ const EducationCard = ({
               <p className="text-md font-medium text-gray-700 inline-block">
                 {institution}
               </p>
+              {group && (
+                <p className="text-sm font-semibold text-gray-500">{group}</p>
+              )}
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#b6b6b6] transition-all duration-500 group-hover:w-full"></div>
             </div>
 
