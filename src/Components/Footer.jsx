@@ -1,19 +1,17 @@
 const Footer = ({
   aboutMeRef,
   experiencesRef,
-  consultationRef,
-  latestWorkRef,
-  blogsRef,
+  publicationsRef,
+  researchRef,
   homeRef,
   scrollToSection,
 }) => {
   const links = [
     { name: "Home", id: "home", ref: homeRef },
     { name: "About Me", id: "about", ref: aboutMeRef },
-    { name: "Portfolio", id: "portfolio", ref: latestWorkRef },
+    { name: "Research", id: "portfolio", ref: researchRef },
     { name: "Experiences", id: "experiences", ref: experiencesRef },
-    { name: "Services", id: "services", ref: consultationRef },
-    { name: "Blog", id: "blog", ref: blogsRef },
+    { name: "PubLications", id: "services", ref: publicationsRef },
   ];
 
   return (
@@ -24,7 +22,7 @@ const Footer = ({
             {links.map((link) => (
               <li
                 key={link.id}
-                onClick={() => scrollToSection(link.ref)} // Scroll to the corresponding section
+                onClick={() => scrollToSection(link.ref)}
                 className="cursor-pointer py-2 px-4 hover:bg-white hover:text-primary rounded-lg transition-colors duration-300"
               >
                 {link.name}
