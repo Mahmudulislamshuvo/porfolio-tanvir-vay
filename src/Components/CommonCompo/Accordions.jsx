@@ -51,17 +51,21 @@ export default function AccordionCustomIcon({ experienceData }) {
               <div className="flex flex-col md:flex-row gap-6 items-start justify-between w-full">
                 <div className="flex w-full justify-between items-center gap-x-5">
                   {/* Title */}
-                  <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
-                    {project.title}
-                  </h3>
+                  <div className="flex flex-col justify-start items-start">
+                    <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
+                      {project.title}
+                    </h3>
+                    <p className="text-lg text-gray-500">{project.subtitle}</p>
+                    <p className="text-base text-gray-500">
+                      {project.location}
+                    </p>
+                  </div>
 
                   {/* Period */}
-                  <div className="flex items-start space-x-2 justify-start pr-5">
-                    <GoDotFill className="text-primary shrink-0" />
-                    <span className="text-sm font-medium text-gray-500 tracking-wide text-start">
-                      {project.period}
-                    </span>
-                  </div>
+
+                  <span className="text-sm font-medium text-gray-500 tracking-wide text-start pr-5">
+                    {project.period}
+                  </span>
                 </div>
               </div>
             </AccordionHeader>
