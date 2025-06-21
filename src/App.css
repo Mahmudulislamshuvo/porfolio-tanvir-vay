@@ -29,3 +29,7 @@ html {
 .animate-left-right {
   animation: leftRight 1s infinite;
 }
+
+.inexingZ {
+  z-index: 999999;
+}

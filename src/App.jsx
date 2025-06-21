@@ -5,13 +5,13 @@ import Banner from "./Components/Banner";
 // import Consultation from "./Components/Consultation";
 import Experiences from "./Components/Experiences";
 import Footer from "./Components/Footer";
-import GotAVision from "./Components/GotAVision";
 import LatestWork from "./Components/LatestWork";
 import Navbar from "./Components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Academics from "./Components/Academics";
 import Publication from "./Components/Publication";
+import Feature from "./Components/Feature";
 
 AOS.init();
 
@@ -22,12 +22,14 @@ const App = () => {
   const experiencesRef = useRef(null);
   const researchRef = useRef(null);
   const publicationsRef = useRef(null);
-  // const blogsRef = useRef(null);
   const footerRef = useRef(null);
   const homeRef = useRef(null);
+  const featureRef = useRef(null);
 
   // Scroll to section when clicking on navbar items
   const scrollToSection = (ref) => {
+    console.log(ref);
+
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -42,7 +44,7 @@ const App = () => {
           experiencesRef={experiencesRef}
           publicationsRef={publicationsRef}
           researchRef={researchRef}
-          // blogsRef={blogsRef}
+          featureRef={featureRef}
         />
       </section>
 
@@ -60,28 +62,27 @@ const App = () => {
         <Experiences />
       </section>
 
-      <section ref={researchRef}>
-        <LatestWork />
-      </section>
-
       <section ref={publicationsRef}>
         <Publication />
       </section>
 
-      {/* <section ref={blogsRef}>
-        <Blogs />
-      </section> */}
+      <section ref={researchRef}>
+        <LatestWork />
+      </section>
 
-      <GotAVision />
+      <section ref={featureRef}>
+        <Feature />
+      </section>
+
       <section ref={footerRef}>
         <Footer
           scrollToSection={scrollToSection}
           aboutMeRef={aboutMeRef}
+          academicsRef={academicsRef}
           experiencesRef={experiencesRef}
           publicationsRef={publicationsRef}
           researchRef={researchRef}
-          // blogsRef={blogsRef}
-          homeRef={homeRef}
+          featureRef={featureRef}
         />
       </section>
     </div>

@@ -9,8 +9,8 @@ const LatestWork = () => {
     <div className="bg-background py-[100px]">
       <div className="container">
         <PortfolioBlogHeadings
-          title={"Research"}
-          description={"Latest Works"}
+          title={"Certifications"}
+          description={"All Certificates"}
         />
         <Slider />
       </div>

@@ -1,83 +1,72 @@
-import { useRef, useEffect, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { MdArrowOutward, MdKeyboardArrowLeft } from "react-icons/md";
-import { Navigation, FreeMode, Pagination } from "swiper/modules";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { Navigation, FreeMode, Pagination } from "swiper/modules";
+
+import CerTificateModal from "./CertificateModal";
+
+import certifcate1 from "../../assets/Certifications/1_page_1.png";
+import certifcate2 from "../../assets/Certifications/2.png";
+import certifcate3 from "../../assets/Certifications/3.jpg";
+import certifcate4 from "../../assets/Certifications/4.png";
+import certifcate5 from "../../assets/Certifications/5.jpg";
+import certifcate6 from "../../assets/Certifications/6.jpeg";
+import certifcate7 from "../../assets/Certifications/7.jpeg";
+import certifcate8 from "../../assets/Certifications/8.png";
+import certifcate9 from "../../assets/Certifications/9.png";
+import certifcate10 from "../../assets/Certifications/10.png";
 
 export default function Slider() {
   const Data = [
-    {
-      id: 1,
-      image:
-        "https://images.pexels.com/photos/31837575/pexels-photo-31837575/free-photo-of-savannah-landscape-in-zaria-nigeria.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "Hello digital Agency website",
-      mavigationLink: "",
-    },
-    {
-      id: 2,
-      image:
-        "https://images.pexels.com/photos/31837575/pexels-photo-31837575/free-photo-of-savannah-landscape-in-zaria-nigeria.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "Hello digital Agency website",
-      mavigationLink: "",
-    },
-    {
-      id: 3,
-      image:
-        "https://images.pexels.com/photos/2312365/pexels-photo-2312365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "Creative web design portfolio",
-      mavigationLink: "",
-    },
-    {
-      id: 4,
-      image:
-        "https://images.pexels.com/photos/2180032/pexels-photo-2180032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "E-commerce website for fashion",
-      mavigationLink: "",
-    },
-    {
-      id: 5,
-      image:
-        "https://images.pexels.com/photos/3182787/pexels-photo-3182787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "Responsive agency landing page",
-      mavigationLink: "",
-    },
-    {
-      id: 6,
-      image:
-        "https://images.pexels.com/photos/20434746/pexels-photo-20434746/free-photo-of-portrait-of-couple-wearing-traditional-clothes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "Modern website design trends",
-      mavigationLink: "",
-    },
-    {
-      id: 7,
-      image:
-        "https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "Creative marketing agency website",
-      mavigationLink: "",
-    },
-    {
-      id: 8,
-      image:
-        "https://images.pexels.com/photos/2184679/pexels-photo-2184679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      title: "Custom web design for businesses",
-      mavigationLink: "",
-    },
+    { id: 1, image: certifcate1, title: "Certificate 1 - Page 1" },
+    { id: 2, image: certifcate2, title: "Certificate 2" },
+    { id: 3, image: certifcate3, title: "Certificate 3" },
+    { id: 4, image: certifcate4, title: "Certificate 4" },
+    { id: 5, image: certifcate5, title: "Certificate 5" },
+    { id: 6, image: certifcate6, title: "Certificate 6" },
+    { id: 7, image: certifcate7, title: "Certificate 7" },
+    { id: 8, image: certifcate8, title: "Certificate 8" },
+    { id: 9, image: certifcate9, title: "Certificate 9" },
+    { id: 10, image: certifcate10, title: "Certificate 10" },
   ];
 
-  // 1. Create refs for navigation buttons
+  const [isModalOpen, setIsOpen] = useState(false);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-
-  // 2. Use state to trigger swiper update
   const [swiperReady, setSwiperReady] = useState(false);
 
   useEffect(() => {
     setSwiperReady(true);
   }, []);
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isModalOpen]);
+
+  const openModal = (certificate) => {
+    setSelectedCertificate(certificate);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedCertificate(null);
+  };
+
   return (
-    <div className="container relative">
+    <div className="container relative z-10">
       {swiperReady && (
         <Swiper
           navigation={{
@@ -93,10 +82,14 @@ export default function Slider() {
           }}
           modules={[FreeMode, Pagination, Navigation]}
           className="mySwiper"
+          style={{ zIndex: 1 }}
         >
           {Data.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="w-[450px] h-[400px] p-5 group">
+            <SwiperSlide key={item.id} className="!z-0">
+              <div
+                onClick={() => openModal(item)}
+                className="w-[450px] h-[400px] p-5 group"
+              >
                 <div className="relative">
                   <img
                     className="object-cover overflow-hidden rounded-xl w-[400px] h-[300px]"
@@ -112,6 +105,16 @@ export default function Slider() {
             </SwiperSlide>
           ))}
         </Swiper>
+      )}
+
+      {/* Modal Component */}
+      {isModalOpen && (
+        <CerTificateModal
+          modalIsOpen={isModalOpen}
+          closeModal={closeModal}
+          certificate={selectedCertificate}
+          className="inexingZ"
+        />
       )}
 
       {/* 3. Attach refs to buttons */}

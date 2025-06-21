@@ -5,6 +5,7 @@ const Footer = ({
   researchRef,
   homeRef,
   scrollToSection,
+  featureRef,
 }) => {
   const links = [
     { name: "Home", id: "home", ref: homeRef },
@@ -12,6 +13,7 @@ const Footer = ({
     { name: "Research", id: "portfolio", ref: researchRef },
     { name: "Experiences", id: "experiences", ref: experiencesRef },
     { name: "PubLications", id: "services", ref: publicationsRef },
+    { name: "Features", id: "features", ref: featureRef },
   ];
 
   return (
@@ -32,7 +34,7 @@ const Footer = ({
 
           {/* Email section */}
           <div className="mt-8 lg:mt-0 text-center lg:text-right">
-            <p className="text-white text-lg">hello@dnova.com</p>
+            <p className="text-white text-lg">aahsan.cs@gmail.com</p>
           </div>
         </div>
       </div>
