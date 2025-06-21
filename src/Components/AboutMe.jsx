@@ -116,7 +116,13 @@ const AboutMe = () => {
                     className="h-5 w-5"
                   />
                 </span>
-                <a href="https://scholar.google.com/citations?user=3G8WUu0AAAAJ&hl=en&oi=ao">
+
+                <a
+                  href="https://scholar.google.com/citations?user=3G8WUu0AAAAJ&hl=en&oi=ao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                >
                   Google Scholar
                 </a>
               </li>
@@ -126,14 +132,26 @@ const AboutMe = () => {
                 <span>
                   <img src={ORCID_iD} alt="GoogleScholer" className="h-5 w-5" />
                 </span>
-                <a href="https://orcid.org/0009-0004-1212-8690">ORCiD</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://orcid.org/0009-0004-1212-8690"
+                  className="text-xl font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                >
+                  ORCiD
+                </a>
               </li>
               <li className="flex items-center gap-x-3">
                 <FaHandPointRight className="text-blue-500 animate-bounce" />
                 <span>
                   <img src={linkedin} alt="GoogleScholer" className="h-5 w-5" />
                 </span>
-                <a href="https://www.linkedin.com/in/hashibul-shoaib">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/hashibul-shoaib"
+                  className="text-xl font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                >
                   Linkedin
                 </a>
               </li>
