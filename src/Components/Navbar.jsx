@@ -9,6 +9,7 @@ const Navbar = ({
   experiencesRef,
   publicationsRef,
   researchRef,
+  featureRef,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -45,14 +46,8 @@ const Navbar = ({
                 </button>
               </li>
               <li>
-                <button>
-                  <a
-                    href="https://tinyurl.com/5bhsaepm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Feature
-                  </a>
+                <button onClick={() => scrollToSection(featureRef)}>
+                  Feature
                 </button>
               </li>
             </ul>

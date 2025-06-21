@@ -81,7 +81,10 @@ const Publication = () => {
           </div>
           <div className="flex flex-wrap justify-between gap-y-5">
             {publications.map((publication) => (
-              <div className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl p-6 max-w-2xl w-[49%]">
+              <div
+                key={publication.id}
+                className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 border border-gray-100 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl p-6 max-w-2xl w-[49%]"
+              >
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-24 h-24">
                   <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-blue-400 rounded-tr-2xl"></div>
