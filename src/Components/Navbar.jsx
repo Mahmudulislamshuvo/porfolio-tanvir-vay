@@ -16,9 +16,6 @@ const Navbar = ({
     <nav className="bg-white border-b-[2px] border-[#ededed] fixed w-full top-0 z-50">
       <div className="bg-background">
         <div className="py-3 container flex justify-between items-center">
-          {/* Logo Section */}
-          <div className="text-4xl font-semibold">Logo</div>
-
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-x-[40px]">
             <ul className="flex gap-x-8 text-[16px] text-primary">
@@ -54,7 +51,7 @@ const Navbar = ({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Feature & Electronic Media
+                    Feature
                   </a>
                 </button>
               </li>
@@ -63,9 +60,12 @@ const Navbar = ({
 
           {/* Book a Call Button */}
           <div className="hidden md:block">
-            <button className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline">
-              Book A Call <MdOutlineArrowOutward />
-            </button>
+            <a
+              href="mailto:aahsan.cs@gmail.com"
+              className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline"
+            >
+              Contact me <MdOutlineArrowOutward />
+            </a>
           </div>
 
           {/* Mobile Hamburger Menu */}
@@ -102,9 +102,12 @@ const Navbar = ({
             </ul>
             <div className="flex justify-center mt-4">
               {/* Book a Call Button in Mobile Menu */}
-              <button className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline">
-                Book A Call <MdOutlineArrowOutward />
-              </button>
+              <a
+                href="mailto:contact@example.com"
+                className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline"
+              >
+                Contact me <MdOutlineArrowOutward />
+              </a>
             </div>
           </div>
         )}

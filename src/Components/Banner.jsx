@@ -1,5 +1,5 @@
-import BannerProject from "./CommonCompo/BannerProject";
 import bannerimg from "../assets/mainBanner.png";
+// import bannerimg from "../assets/IMG_6166 (2).png";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import ProfileImage from "./CommonCompo/ProfileImage";
 import { useEffect, useState } from "react";
@@ -68,21 +68,15 @@ const Banner = ({ scrollToSection, footerRef }) => {
 
           {/* Left Section */}
           <div className="pl-10 lg:w-1/2">
-            <div className="flex gap-x-8 pt-14 flex-wrap justify-between w-[65%]">
-              <BannerProject
-                title={"+200"}
-                description={"Projects Completed"}
-              />
-              <BannerProject title={"+50"} description={"StartUp Raised"} />
-            </div>
+            {/* Banner projects Space here  */}
             <div className="text-primary flex items-center flex-col lg:flex-row">
               {/* Banner Text */}
               <div className="text-center lg:text-left">
-                <h1 className="text-[200px] leading-none pt-10 text-4xl md:text-6xl lg:text-[200px]">
+                <h1 className="text-[250px] leading-none pt-10 text-4xl md:text-6xl lg:text-[200px]">
                   Hello
                 </h1>
                 <p className="text-2xl pl-4">
-                  --This is <span className="font-bold">{text}</span>
+                  This is <span className="font-bold">{text}</span>
                 </p>
               </div>
             </div>
@@ -95,8 +89,8 @@ const Banner = ({ scrollToSection, footerRef }) => {
           </div>
 
           {/* Right Section (Profile Image) */}
-          <div className="absolute top-0 right-0 flex justify-end w-[55%] lg:w-1/2">
-            <img src={bannerimg} alt="bannerimg" />
+          <div className="absolute bottom-0 right-0 flex justify-end w-[60%] lg:w-1/2">
+            <img src={bannerimg} alt="bannerimg" className="h-[100vh]" />
             {/* Circle design under that line, Just need to uncomment it */}
             {/* <ProfileImage imgSrc={bannerimg} alt="bannerimg" /> */}
           </div>

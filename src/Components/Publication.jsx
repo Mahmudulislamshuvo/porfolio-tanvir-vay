@@ -111,11 +111,7 @@ const Publication = () => {
                       </a>
                     </div>
                   </div>
-
-                  {/* Abstract button */}
-                  {/* <button className="mt-6 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg transition-all duration-300 transform group-hover:-translate-y-0.5 hover:shadow-md">
-                     View Abstract
-                   </button> */}
+                  {/* Button place */}
                 </div>
               </div>
             ))}
