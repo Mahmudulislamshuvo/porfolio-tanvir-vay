@@ -5,13 +5,13 @@ import Banner from "./Components/Banner";
 // import Consultation from "./Components/Consultation";
 import Experiences from "./Components/Experiences";
 import Footer from "./Components/Footer";
-import LatestWork from "./Components/LatestWork";
 import Navbar from "./Components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Academics from "./Components/Academics";
 import Publication from "./Components/Publication";
 import Feature from "./Components/Feature";
+import Certifications from "./Components/Certifications";
 
 AOS.init();
 
@@ -20,7 +20,7 @@ const App = () => {
   const aboutMeRef = useRef(null);
   const academicsRef = useRef(null);
   const experiencesRef = useRef(null);
-  const researchRef = useRef(null);
+  const certificationsRef = useRef(null);
   const publicationsRef = useRef(null);
   const footerRef = useRef(null);
   const homeRef = useRef(null);
@@ -43,7 +43,7 @@ const App = () => {
           academicsRef={academicsRef}
           experiencesRef={experiencesRef}
           publicationsRef={publicationsRef}
-          researchRef={researchRef}
+          certificationsRef={certificationsRef}
           featureRef={featureRef}
         />
       </section>
@@ -66,8 +66,8 @@ const App = () => {
         <Publication />
       </section>
 
-      <section ref={researchRef}>
-        <LatestWork />
+      <section ref={certificationsRef}>
+        <Certifications />
       </section>
 
       <section ref={featureRef}>
@@ -81,7 +81,7 @@ const App = () => {
           academicsRef={academicsRef}
           experiencesRef={experiencesRef}
           publicationsRef={publicationsRef}
-          researchRef={researchRef}
+          certificationsRef={certificationsRef}
           featureRef={featureRef}
         />
       </section>

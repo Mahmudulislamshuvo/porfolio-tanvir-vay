@@ -1,23 +1,21 @@
-import React from "react";
 import Modal from "react-modal";
 
-// Custom styles with proper z-index handling
 const customStyles = {
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.85)", // Dark background overlay
-    zIndex: 9999, // Ensure overlay is on top of everything
+    backgroundColor: "rgba(0, 0, 0, 0.85)",
+    zIndex: 9999,
     display: "flex",
     justifyContent: "center",
-    alignItems: "center", // Center the modal vertically and horizontally
+    alignItems: "center",
   },
   content: {
     padding: 0,
     border: "none",
     background: "none",
     overflow: "visible",
-    zIndex: 10000, // Ensure content is above the overlay
-    maxWidth: "90%", // Limit the max width
-    maxHeight: "90%", // Limit the max height
+    zIndex: 10000,
+    maxWidth: "90%",
+    maxHeight: "90%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

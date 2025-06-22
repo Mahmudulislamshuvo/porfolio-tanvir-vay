@@ -18,25 +18,25 @@ const Publication = () => {
     },
     {
       id: 2,
+      type: "Journal Publication",
+      title:
+        "Advancements and challenges of deep learning architectures for aerial image analysis: A systematic review",
+      journal: "Intelligent Systems with Applications",
+      year: 2025,
+      publicationType: "Journal article",
+      doi: "10.1016/j.iswa.2025.200537",
+    },
+    {
+      id: 3,
       type: "Conference Paper",
-      title: "Yoga Posture Image Classification Using Big Transfer(BiT)",
+      title:
+        "A Deep Learning Model for Lane Segmentation in Autonomous Vehicles Navigation",
       journal:
         "IEEE Conference on Computing Applications and Systems, COMPAS 2024",
       year: 2024,
       publicationType: "Conference paper",
-      doi: "10.1109/COMPAS60761.2024.10796330",
+      doi: "10.1145/3723178.3723232",
     },
-    {
-      id: 3,
-      type: "Book Chapter",
-      title:
-        "Improved Classification of Kidney Lesions in CT Scans Using CNN with Attention Layers: Achieving High Accuracy and Performance",
-      journal: "Studies in Big Data",
-      year: 2024,
-      publicationType: "Book chapter",
-      doi: "10.1007/978-981-97-3966-0_8",
-    },
-    // New entries added here
     {
       id: 4,
       type: "Conference Paper",
