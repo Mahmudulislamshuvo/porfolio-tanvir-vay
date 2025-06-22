@@ -15,21 +15,24 @@ const AboutMe = () => {
           <div className="w-[35%] px-10 py-3">
             <h1 className="text-primary text-5xl font-bold">About Me</h1>
             <p className="text-secondary pt-6 loading-lg/5 loading-md/3">
-              Hello, -an IT professional and researcher with a strong academic
-              foundation and a passion for technology innovation. With two
-              master&#39;s degrees — one in Information Technology from St.
-              Francis College, New York, and another in Applied Physics and
-              Electronics from Jahangirnagar University — along with a
-              Bachelor’s in Electrical &amp; Electronics Engineering from
-              Bangladesh University of Business &amp; Technology, I bring a
-              unique blend of technical expertise and interdisciplinary
-              knowledge. Currently, I serve as an IT Administrator at an HVAC
-              company, where I manage systems, solve technical challenges, and
-              keep everything running smoothly behind the scenes. My role spans
-              system integration, data protection, user support, digital
-              transformation, and implementing scalable IT solutions that align
-              with evolving business needs. (ERP), remote monitoring, and system
-              integration projects that enhance operational efficiency.
+              I am Hashibul Ahsan Shoaib — an IT professional and researcher
+              with a robust academic background and a fervor for technological
+              innovation. I hold two master's degrees — one in Information
+              Technology from St. Francis College, New York, and another in
+              Applied Physics and Electronics from Jahangirnagar University — in
+              addition to a Bachelor’s degree in Electrical &; Electronics
+              Engineering from Bangladesh University of Business &; Technology.
+              This educational background equips me with a distinctive
+              combination of technical skills and interdisciplinary knowledge.
+              At present, I work as an IT Administrator at an HVAC company,
+              where I oversee systems, address technical issues, and ensure
+              seamless operations behind the scenes. My responsibilities
+              encompass system integration, data security, user assistance,
+              digital transformation, and the implementation of scalable IT
+              solutions that meet the changing demands of the business. This
+              includes projects related to Enterprise Resource Planning (ERP),
+              remote monitoring, and system integration that improve operational
+              efficiency.
             </p>
           </div>
           <div className="w-full lg:w-[30%] bg-white rounded-xl p-5">
@@ -41,14 +44,14 @@ const AboutMe = () => {
               My research
             </h2>
             <p className="text-secondary text-start mb-6">
-              My research and technical interests lie strongly in Deep Learning
-              and Artificial Intelligence, with a focus on practical
-              applications across industries. I specialize in potential
-              purchaser prediction using AutoGluon ensemble frameworks,
-              optimizing accuracy and decision-making in datasets spanning time
-              deposits, health insurance, 5G mobile packages, and credit card
-              services. I also work extensively with advanced deep learning
-              models such as:
+              My research and technical interests are deeply rooted in Deep
+              Learning and Artificial Intelligence, particularly in their
+              practical applications across various industries. I focus on
+              predicting potential purchasers using AutoGluon ensemble
+              frameworks, enhancing accuracy and decision-making in datasets
+              that include time deposits, health insurance, 5G mobile packages,
+              and credit card services. Additionally, I engage extensively with
+              advanced deep learning models such as:
             </p>
             <ol className="list-disc pl-5 space-y-2 text-base text-gray-800">
               <li>
@@ -78,14 +81,15 @@ const AboutMe = () => {
           <div className="w-[35%] px-10 py-5">
             <div className="flex gap-x-3 pt-[20px]">
               <p className="text-secondary">
-                Outside of the technical sphere, I’m a cricket enthusiast, a
-                poetry writer, a traveler, and a photography lover. I believe
-                that creativity and technology go hand in hand — whether
-                it&#39;s composing a poem, snapping a sunset, or designing an
-                intelligent algorithm. Join me as I continue navigating the
-                dynamic world of Information Technology and Deep Learning,
-                driven by a relentless curiosity and a commitment to shaping
-                smarter, more connected systems for the future.
+                Beyond the realm of technology, I am passionate about cricket,
+                enjoy writing poetry, love to travel, and have a keen interest
+                in photography. I hold the belief that creativity and technology
+                are intertwined — whether it involves crafting a poem, capturing
+                a sunset, or developing an advanced algorithm. I invite you to
+                accompany me as I explore the ever-evolving landscape of
+                Information Technology and Deep Learning, fueled by an
+                insatiable curiosity and a dedication to creating more
+                intelligent and interconnected systems for the future..
               </p>
             </div>
             <ol className="list-disc pl-5 space-y-2 text-xl text-gray-800 mt-5">
