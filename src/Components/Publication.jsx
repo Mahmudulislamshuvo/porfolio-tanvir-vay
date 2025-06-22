@@ -15,6 +15,7 @@ const Publication = () => {
       year: 2025,
       publicationType: "Journal article",
       doi: "10.1109/OJCS.2025.3552376",
+      link: "https://doi.org/10.1109/ojcs.2025.3552376",
     },
     {
       id: 2,
@@ -25,6 +26,7 @@ const Publication = () => {
       year: 2025,
       publicationType: "Journal article",
       doi: "10.1016/j.iswa.2025.200537",
+      link: "https://doi.org/10.1016/j.iswa.2025.200537",
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ const Publication = () => {
       year: 2024,
       publicationType: "Conference paper",
       doi: "10.1145/3723178.3723232",
+      link: "https://doi.org/10.1145/3723178.3723232",
     },
     {
       id: 4,
@@ -47,6 +50,7 @@ const Publication = () => {
       year: 2024,
       publicationType: "Conference paper",
       doi: "10.1145/3723178.3723226",
+      link: "https://doi.org/10.1145/3723178.3723226",
     },
     {
       id: 5,
@@ -57,6 +61,7 @@ const Publication = () => {
       year: 2024,
       publicationType: "Conference paper",
       doi: "10.1109/COMPAS60761.2024.10796330",
+      link: "https://doi.org/10.1109/compas60761.2024.10796330",
     },
     {
       id: 6,
@@ -67,6 +72,7 @@ const Publication = () => {
       year: 2024,
       publicationType: "Book chapter",
       doi: "10.1007/978-981-97-3966-0_8",
+      link: "https://doi.org/10.1007/978-981-97-3966-0_8",
     },
   ];
 
@@ -136,7 +142,7 @@ const Publication = () => {
                     <div className="flex items-center">
                       <LinkIcon />
                       <a
-                        href={publication.doi}
+                        href={publication.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors"

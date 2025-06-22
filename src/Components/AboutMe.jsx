@@ -74,27 +74,9 @@ const AboutMe = () => {
                 complex data relationships in both visual and textual formats
               </li>
             </ol>
-
-            {/* Image */}
-            {/* <img
-              className="rounded-lg w-full h-[200px] object-cover"
-              src="https://images.pexels.com/photos/5641802/pexels-photo-5641802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Nature"
-            /> */}
           </div>
           <div className="w-[35%] px-10 py-5">
-            {/* <div className="w-full flex items-center justify-center relative group">
-              <img
-                className="h-[25%] w-[60%] object-cover rounded-lg"
-                src="https://images.pexels.com/photos/31933726/pexels-photo-31933726/free-photo-of-silhouette-by-the-serene-ocean-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=""
-              />
-              <MdOutlineArrowOutward className="h-[50px] w-[50px] bg-white rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div> */}
             <div className="flex gap-x-3 pt-[20px]">
-              {/* <div>
-                <BsPlusCircle className="bg-primary text-white h-[40px] w-[40px] rounded-full" />
-              </div> */}
               <p className="text-secondary">
                 Outside of the technical sphere, I’m a cricket enthusiast, a
                 poetry writer, a traveler, and a photography lover. I believe

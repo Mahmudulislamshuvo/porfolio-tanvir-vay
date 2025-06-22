@@ -1,11 +1,12 @@
+import { FaHandPointRight } from "react-icons/fa";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Feature = () => {
   return (
-    <div className="bg-[#ededed] py-[100px]">
+    <div className="bg-[#ededed] py-[35px]">
       <div className="container">
         <div className="text-center">
-          <h2 className="text-primary text-5xl">Features</h2>
+          <h2 className="text-primary text-5xl">Featured</h2>
           <p className="text-secondary px-[300px] pt-5 pb-10 text-start">
             After completing my Bachelor's in Electrical and Electronic
             Engineering from BUBT, I started my career at bKash as a Merchant
@@ -18,10 +19,12 @@ const Feature = () => {
             aiming to contribute to the global IT industry...
           </p>
           <button className="inline-flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline">
+            <FaHandPointRight className="text-blue-500 animate-bounce" />
             <a
               href="https://tinyurl.com/5bhsaepm"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-blue-500"
             >
               Full Summary
             </a>
