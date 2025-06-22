@@ -8,7 +8,7 @@ const Navbar = ({
   academicsRef,
   experiencesRef,
   publicationsRef,
-  researchRef,
+  certificationsRef,
   featureRef,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,13 +36,13 @@ const Navbar = ({
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection(researchRef)}>
-                  Research
+                <button onClick={() => scrollToSection(publicationsRef)}>
+                  Publications
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection(publicationsRef)}>
-                  Publications
+                <button onClick={() => scrollToSection(certificationsRef)}>
+                  Certifications
                 </button>
               </li>
               <li>
@@ -90,7 +90,7 @@ const Navbar = ({
               </li>
 
               <li>
-                <button onClick={() => scrollToSection(researchRef)}>
+                <button onClick={() => scrollToSection(certificationsRef)}>
                   Research
                 </button>
               </li>

@@ -40,7 +40,7 @@ const Academics = () => {
             degree="Secondary School Certificate (SSC)"
             institution="Monipur High School & College, Dhaka"
             icon={monipur}
-            duration="2012 - 2013"
+            duration="2003 - 2013"
             group="Science"
           />
         </div>

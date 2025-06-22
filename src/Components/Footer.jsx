@@ -2,7 +2,7 @@ const Footer = ({
   aboutMeRef,
   experiencesRef,
   publicationsRef,
-  researchRef,
+  certificationsRef,
   homeRef,
   scrollToSection,
   featureRef,
@@ -10,9 +10,9 @@ const Footer = ({
   const links = [
     { name: "Home", id: "home", ref: homeRef },
     { name: "About Me", id: "about", ref: aboutMeRef },
-    { name: "Research", id: "portfolio", ref: researchRef },
     { name: "Experiences", id: "experiences", ref: experiencesRef },
-    { name: "PubLications", id: "services", ref: publicationsRef },
+    { name: "Publications", id: "publications", ref: publicationsRef },
+    { name: "Certifications", id: "certifications", ref: certificationsRef },
     { name: "Features", id: "features", ref: featureRef },
   ];
 

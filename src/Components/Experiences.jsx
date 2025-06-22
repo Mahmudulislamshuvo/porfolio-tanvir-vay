@@ -5,10 +5,10 @@ const Experiences = () => {
   const projects = [
     {
       id: 1,
-      title: "IT Administrator Superior Hvac",
+      title: "IT Administrator",
       subtitle: "Superior Hvac",
       location: "New York",
-      period: "February 2022 - Present",
+      period: "2024 - Present",
       orderlist: [
         {
           id: 1,
@@ -61,7 +61,7 @@ const Experiences = () => {
       title: "SQA Engineer",
       subtitle: "BizMotion Limited",
       location: "Dhaka",
-      period: "February 2022 - Present",
+      period: "2021 - 2023",
       orderlist: [
         {
           id: 1,
@@ -106,7 +106,7 @@ const Experiences = () => {
       title: "Business Development Manager ",
       subtitle: "Rijuk Limited (www.iferi.com)",
       location: "Dhaka",
-      period: "February 2022 - Present",
+      period: "2020 - 2021",
       orderlist: [
         {
           id: 1,
