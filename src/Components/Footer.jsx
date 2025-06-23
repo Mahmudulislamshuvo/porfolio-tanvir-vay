@@ -34,7 +34,9 @@ const Footer = ({
 
           {/* Email section */}
           <div className="mt-8 lg:mt-0 text-center lg:text-right">
-            <p className="text-white text-lg">aahsan.cs@gmail.com</p>
+            <a href="mailto:aahsan.cs@gmail.com" className="text-white text-lg">
+              aahsan.cs@gmail.com
+            </a>
           </div>
         </div>
       </div>

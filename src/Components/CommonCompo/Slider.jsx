@@ -20,20 +20,72 @@ import certifcate10 from "../../assets/Certifications/10.png";
 
 export default function Slider() {
   const Data = [
-    { id: 1, image: certifcate1, title: "Certificate 1 - Page 1" },
-    { id: 2, image: certifcate2, title: "Certificate 2" },
-    { id: 3, image: certifcate3, title: "Certificate 3" },
-    { id: 4, image: certifcate4, title: "Certificate 4" },
-    { id: 5, image: certifcate5, title: "Certificate 5" },
-    { id: 6, image: certifcate6, title: "Certificate 6" },
-    { id: 7, image: certifcate7, title: "Certificate 7" },
-    { id: 8, image: certifcate8, title: "Certificate 8" },
-    { id: 9, image: certifcate9, title: "Certificate 9" },
-    { id: 10, image: certifcate10, title: "Certificate 10" },
+    {
+      id: 1,
+      image: certifcate1,
+      title:
+        "Best researcher of the year 2024-2025 for the article: An Enhanced Deep Learning Approach to Potential Purchaser Prediction: AutoGluon Ensembles for Cross-Industry Profit Maximization. Journal: IEEE Open Journal of the Computer Society. Publisher: IEEE.",
+    },
+    {
+      id: 2,
+      image: certifcate2,
+      title:
+        "Certificate of presentation for the paper: Yoga Posture Image Classification Using Big Transfer(BiT) at IEEE Conference on Computing Applications and Systems (COMPAS 2024).",
+    },
+    {
+      id: 3,
+      image: certifcate3,
+      title:
+        "Certificate of Certified Salesforce Administrator from Salesforce.",
+    },
+    {
+      id: 4,
+      image: certifcate4,
+      title:
+        "Certificate for 2025 Aspire Leaders Program from Aspire Institute.",
+    },
+    {
+      id: 5,
+      image: certifcate5,
+      title:
+        "Certificate for Cyber Awareness for Digital Bangladesh from Digital Security Agency.",
+    },
+    {
+      id: 6,
+      image: certifcate6,
+      title:
+        "Certificate for Information Technology Passport Examination (IP) of Information technology Engineers Examination (ITEE) from Bangladesh IT - engineers Examination Center (BD-ITEC) & Bangladesh Computer Council (BCC).",
+    },
+    {
+      id: 7,
+      image: certifcate7,
+      title:
+        "Certificate for Acquiring Competencies for Employment (ACE) form Bangladesh Youth Leadership Center (BYLC).",
+    },
+    {
+      id: 8,
+      image: certifcate8,
+      title:
+        "Certificate for 18th International Conference on Computer and Information Technology (ICCIT) from Department of CSE of Military Institute of Science and Technology.",
+    },
+    {
+      id: 9,
+      image: certifcate9,
+      title:
+        "Certificate for Software Engineering Job Simulation (Wells Fargo) from Forage.",
+    },
+    {
+      id: 10,
+      image: certifcate10,
+      title:
+        "Certificate for Data Science Job Simulation (British Airways) from Forage.",
+    },
   ];
 
   const [isModalOpen, setIsOpen] = useState(false);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
+
+  const [expandedId, setExpandedId] = useState(null);
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -43,18 +95,6 @@ export default function Slider() {
     setSwiperReady(true);
   }, []);
 
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isModalOpen]);
-
   const openModal = (certificate) => {
     setSelectedCertificate(certificate);
     setIsOpen(true);
@@ -63,6 +103,19 @@ export default function Slider() {
   const closeModal = () => {
     setIsOpen(false);
     setSelectedCertificate(null);
+  };
+
+  const handleSeeMore = (id) => {
+    if (expandedId === id) {
+      setExpandedId(null);
+    } else {
+      setExpandedId(id);
+    }
+  };
+
+  const truncateTitle = (title) => {
+    const threshold = 100;
+    return title.length > threshold ? title.slice(0, threshold) + "..." : title;
   };
 
   return (
@@ -85,14 +138,12 @@ export default function Slider() {
           style={{ zIndex: 1 }}
         >
           {Data.map((item) => (
-            <SwiperSlide key={item.id} className="!z-0">
-              <div
-                onClick={() => openModal(item)}
-                className="w-[450px] h-[400px] p-5 group"
-              >
+            <SwiperSlide key={item.id} className="!z-0 ">
+              <div className="w-[450px] p-5 group">
                 <div className="relative">
                   <img
-                    className="object-cover overflow-hidden rounded-xl w-[400px] h-[300px]"
+                    onClick={() => openModal(item)}
+                    className="object-cover overflow-hidden rounded-xl w-[380px] h-[300px]"
                     src={item.image}
                     alt={item.id}
                   />
@@ -100,7 +151,21 @@ export default function Slider() {
                     <MdArrowOutward className="text-white w-10 h-10" />
                   </div>
                 </div>
-                <h4 className="text-primary text-[20px] pt-2">{item.title}</h4>
+
+                {/* Title with "See more" functionality */}
+                <h4 className="text-primary text-[20px] pt-2">
+                  {expandedId === item.id
+                    ? item.title
+                    : truncateTitle(item.title)}{" "}
+                  {item.title.length > 100 && (
+                    <button
+                      onClick={() => handleSeeMore(item.id)}
+                      className="text-sm text-blue-600 mt-2"
+                    >
+                      {expandedId === item.id ? "See less" : "See more"}
+                    </button>
+                  )}
+                </h4>
               </div>
             </SwiperSlide>
           ))}
@@ -113,11 +178,10 @@ export default function Slider() {
           modalIsOpen={isModalOpen}
           closeModal={closeModal}
           certificate={selectedCertificate}
-          className="inexingZ"
         />
       )}
 
-      {/* 3. Attach refs to buttons */}
+      {/* Navigation buttons */}
       <div
         ref={prevRef}
         className="custom-swiper-button-prev h-15 w-15 rounded-full bg-secondary text-white flex justify-center items-center cursor-pointer absolute top-[45%] left-5 -translate-y-1/2 z-10"

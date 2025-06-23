@@ -1,7 +1,6 @@
-import bannerimg from "../assets/mainBanner.png";
+import bannerimg from "../assets/Image.png";
 // import bannerimg from "../assets/IMG_6166 (2).png";
 import { MdOutlineArrowDownward } from "react-icons/md";
-import ProfileImage from "./CommonCompo/ProfileImage";
 import { useEffect, useState } from "react";
 
 const Banner = ({ scrollToSection, footerRef }) => {
