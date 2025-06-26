@@ -35,13 +35,12 @@ const Banner = ({ scrollToSection, footerRef }) => {
   }, [text, isDeleting, fullText, speed]);
 
   return (
-    <div className="bg-chosenBackground pt-20 md:pt-24 min-h-screen flex items-center">
-      <div className="container">
-        {/* Main flex container: breaks to two columns at the SM breakpoint */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 lg:gap-10">
-          {/* Vertical Line: Now appears starting from the SM breakpoint */}
-          <div className="hidden lg:block">
-            <div className="w-[2px] h-[300px] md:h-[400px] bg-[#ededed] relative">
+    <div className="bg-chosenBackground">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-stretch md:gap-6 lg:gap-10 mt-15 ">
+          {/* Vertical Line wrapper */}
+          <div className="hidden md:block py-[135px] lg:py-[135px]">
+            <div className="relative h-full w-[2px] bg-[#ededed]">
               <p
                 className="absolute whitespace-nowrap"
                 style={{
@@ -67,31 +66,29 @@ const Banner = ({ scrollToSection, footerRef }) => {
             </div>
           </div>
 
-          {/* Left Section (Text Content): 50% width from SM upwards */}
-          <div className="w-full sm:w-1/2 order-2 sm:order-1 text-center sm:text-left px-4 mt-8 sm:mt-0">
-            {/* Typography continues to scale for all device sizes */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-[140px] leading-none font-bold text-primary">
+          {/* Text content block */}
+          <div className="order-2 w-full px-4 text-center sm:text-left md:order-1 md:w-1/2 mt-8 md:mt-0">
+            <h1 className="text-6xl font-bold leading-none text-primary sm:text-7xl md:text-8xl lg:text-[140px] xl:text-[180px] 2xl:text-[220px]">
               Hello
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl mt-2 sm:pl-2">
+            <p className="mt-2 text-lg sm:pl-2 md:text-xl lg:text-2xl">
               This is <span className="font-bold">{text}</span>
             </p>
 
             <button
               onClick={() => scrollToSection(footerRef)}
-              className="flex items-center gap-x-3 text-secondary text-lg md:text-xl mt-12 md:mt-20 mx-auto sm:mx-0"
+              className="mx-auto mt-12 flex items-center gap-x-3 text-lg text-secondary md:mx-0 md:mt-20 md:text-xl"
             >
               Scroll Down <MdOutlineArrowDownward />
             </button>
           </div>
 
-          {/* Right Section (Profile Image): 50% width from SM upwards */}
-          <div className="w-full sm:w-1/2 mx-auto order-1 sm:order-2 flex justify-center sm:justify-end">
+          {/* Image content block */}
+          <div className="order-1 mx-auto flex w-full items-end justify-center md:order-2 md:w-1/2 md:justify-end">
             <img
               src={bannerimg}
               alt="Hashibul Ahsan Shoaib"
-              // Max height is respected on all screens, preventing overflow
-              className="max-h-[60vh] sm:max-h-[85vh] w-auto"
+              className="w-auto max-h-[60vh] md:h-[95vh] object-contain object-bottom"
             />
           </div>
         </div>
