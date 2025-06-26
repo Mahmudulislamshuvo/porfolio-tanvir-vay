@@ -40,7 +40,7 @@ const Banner = ({ scrollToSection, footerRef }) => {
       <div className="w-full flex-grow flex px-4 sm:px-6 lg:px-12">
         <div className="flex w-full flex-col md:flex-row md:items-stretch md:gap-6 lg:gap-10">
           {/* Vertical Line wrapper */}
-          <div className="hidden md:flex items-center py-[175px]">
+          <div className="hidden md:flex items-center py-[175px] md:mt-[50px]">
             <div className="relative h-full w-[2px] bg-[#ededed]">
               <p
                 className="absolute whitespace-nowrap"

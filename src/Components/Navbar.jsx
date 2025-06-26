@@ -13,58 +13,54 @@ const Navbar = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // A single source of truth for navigation links
+  const navLinks = [
+    { name: "About Me", ref: aboutMeRef },
+    { name: "Academics", ref: academicsRef },
+    { name: "Experiences", ref: experiencesRef },
+    { name: "Publications", ref: publicationsRef },
+    { name: "Certifications", ref: certificationsRef },
+    { name: "Featured", ref: featureRef },
+  ];
+
+  // Handler to scroll and then close the mobile menu
+  const handleMobileLinkClick = (ref) => {
+    scrollToSection(ref);
+    setMenuOpen(false);
+  };
+
   return (
-    <nav className="bg-white border-b-[2px] border-[#ededed] fixed w-full top-0 z-50">
-      <div className="bg-background">
-        <div className="py-3 container flex justify-between items-center">
+    <nav className="fixed top-0 z-50 w-full border-b-[2px] border-[#ededed] bg-white/80 backdrop-blur-sm">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-4">
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-x-[40px]">
-            <ul className="flex gap-x-8 text-[16px] text-primary">
-              <li>
-                <button onClick={() => scrollToSection(aboutMeRef)}>
-                  About Me
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection(academicsRef)}>
-                  Academics
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection(experiencesRef)}>
-                  Experiences
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection(publicationsRef)}>
-                  Publications
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection(certificationsRef)}>
-                  Certifications
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection(featureRef)}>
-                  Featured
-                </button>
-              </li>
+          <div className="hidden md:flex items-center gap-x-10">
+            <ul className="flex items-center gap-x-8 text-[16px] font-medium text-primary">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <button
+                    onClick={() => scrollToSection(link.ref)}
+                    className="transition-colors duration-300 hover:text-secondary"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Book a Call Button */}
+          {/* Desktop Contact Button */}
           <div className="hidden md:block">
             <a
               href="mailto:aahsan.cs@gmail.com"
-              className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline"
+              className="flex items-center gap-x-2 text-lg font-semibold text-primary underline transition-transform duration-300 hover:scale-105"
             >
               Contact me <MdOutlineArrowOutward />
             </a>
           </div>
 
-          {/* Mobile Hamburger Menu */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Hamburger Menu Icon */}
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-2xl text-primary"
@@ -74,38 +70,31 @@ const Navbar = ({
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-white p-4">
-            <ul className="flex flex-col items-start gap-y-4 text-xl text-primary">
-              <li>
-                <button onClick={() => scrollToSection(aboutMeRef)}>
-                  About Me
+        {/* Mobile Menu Dropdown */}
+        {/* Uses CSS transitions for a smooth slide-down effect */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+            menuOpen ? "max-h-96 pb-4" : "max-h-0"
+          }`}
+        >
+          <ul className="flex flex-col items-start gap-y-4 text-lg font-medium text-primary">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <button onClick={() => handleMobileLinkClick(link.ref)}>
+                  {link.name}
                 </button>
               </li>
-              <li>
-                <button onClick={() => scrollToSection(experiencesRef)}>
-                  Experiences
-                </button>
-              </li>
-
-              <li>
-                <button onClick={() => scrollToSection(certificationsRef)}>
-                  Research
-                </button>
-              </li>
-            </ul>
-            <div className="flex justify-center mt-4">
-              {/* Book a Call Button in Mobile Menu */}
-              <a
-                href="mailto:contact@example.com"
-                className="flex items-center text-2xl cursor-pointer gap-x-4 text-primary underline"
-              >
-                Contact me <MdOutlineArrowOutward />
-              </a>
-            </div>
+            ))}
+          </ul>
+          <div className="mt-6 border-t border-gray-200 pt-4">
+            <a
+              href="mailto:aahsan.cs@gmail.com"
+              className="flex items-center gap-x-2 text-lg font-semibold text-primary underline"
+            >
+              Contact me <MdOutlineArrowOutward />
+            </a>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
