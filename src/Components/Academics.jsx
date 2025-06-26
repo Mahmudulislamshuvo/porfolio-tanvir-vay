@@ -7,10 +7,21 @@ import monipur from "../assets/academics/monipur.png";
 
 const Academics = () => {
   return (
-    <div className="container">
-      <div className="pb-[50px]">
-        <h1 className="text-center text-5xl font-bold py-[60px]">Academics</h1>
-        <div className="">
+    // Section wrapper with a light background and responsive vertical padding
+    <div className="bg-gray-50 py-16 md:py-24">
+      {/* Using the robust, overflow-proof container we built before */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Responsive heading with appropriate spacing */}
+        <h1 className="text-center text-4xl sm:text-5xl font-bold text-primary mb-12 lg:mb-16">
+          Academics
+        </h1>
+
+        {/* RESPONSIVE GRID LAYOUT: 
+            - Displays a single column on mobile and tablets.
+            - Switches to a two-column grid on large desktops (1024px and up).
+            - `gap-8` provides consistent spacing between cards.
+        */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <EducationCard
             degree="Master of Science In Information Technology (IT)"
             institution="St Francis College, Brooklyn, New York"

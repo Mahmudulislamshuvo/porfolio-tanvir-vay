@@ -17,29 +17,31 @@ const Banner = ({ scrollToSection, footerRef }) => {
       } else {
         setText(fullText.substring(0, text.length - 1));
       }
-      setSpeed(isDeleting ? 80 : 150);
+
       if (!isDeleting && text === fullText) {
-        timer = setTimeout(() => setIsDeleting(true), 2000);
+        setSpeed(2000); // Pause before deleting
+        setIsDeleting(true);
       } else if (isDeleting && text === "") {
-        timer = setTimeout(() => setIsDeleting(false), 500);
+        setSpeed(500); // Pause before re-typing
+        setIsDeleting(false);
+      } else {
+        setSpeed(isDeleting ? 80 : 150); // Typing/deleting speed
       }
     };
 
-    if (!(text === fullText && !isDeleting) && !(text === "" && isDeleting)) {
-      timer = setTimeout(handleTyping, speed);
-    }
+    timer = setTimeout(handleTyping, speed);
 
     return () => clearTimeout(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [text, isDeleting, fullText]);
+  }, [text, isDeleting, fullText, speed]);
 
   return (
-    <div className="bg-background pt-[5%]">
+    <div className="bg-chosenBackground pt-20 md:pt-24 min-h-screen flex items-center">
       <div className="container">
-        <div className="pb-[150px] flex relative flex-col lg:flex-row lg:gap-10">
-          {/* Line */}
-          <div className="pt-[10%]">
-            <div className="w-[2px] h-[400px] bg-[#ededed] relative lg:mt-0">
+        {/* Main flex container: breaks to two columns at the SM breakpoint */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 lg:gap-10">
+          {/* Vertical Line: Now appears starting from the SM breakpoint */}
+          <div className="hidden lg:block">
+            <div className="w-[2px] h-[300px] md:h-[400px] bg-[#ededed] relative">
               <p
                 className="absolute whitespace-nowrap"
                 style={{
@@ -65,33 +67,32 @@ const Banner = ({ scrollToSection, footerRef }) => {
             </div>
           </div>
 
-          {/* Left Section */}
-          <div className="pl-10 lg:w-1/2">
-            {/* Banner projects Space here  */}
-            <div className="text-primary flex items-center flex-col lg:flex-row">
-              {/* Banner Text */}
-              <div className="text-center lg:text-left">
-                <h1 className="text-[250px] leading-none pt-10 text-4xl md:text-6xl lg:text-[200px]">
-                  Hello
-                </h1>
-                <p className="text-2xl pl-4">
-                  This is <span className="font-bold">{text}</span>
-                </p>
-              </div>
-            </div>
+          {/* Left Section (Text Content): 50% width from SM upwards */}
+          <div className="w-full sm:w-1/2 order-2 sm:order-1 text-center sm:text-left px-4 mt-8 sm:mt-0">
+            {/* Typography continues to scale for all device sizes */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-[140px] leading-none font-bold text-primary">
+              Hello
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl mt-2 sm:pl-2">
+              This is <span className="font-bold">{text}</span>
+            </p>
+
             <button
               onClick={() => scrollToSection(footerRef)}
-              className="flex items-center gap-x-3 text-secondary text-2xl mt-[130px] mx-auto lg:mx-0"
+              className="flex items-center gap-x-3 text-secondary text-lg md:text-xl mt-12 md:mt-20 mx-auto sm:mx-0"
             >
               Scroll Down <MdOutlineArrowDownward />
             </button>
           </div>
 
-          {/* Right Section (Profile Image) */}
-          <div className="absolute bottom-0 right-0 flex justify-end w-[60%] lg:w-1/2">
-            <img src={bannerimg} alt="bannerimg" className="h-[100vh]" />
-            {/* Circle design under that line, Just need to uncomment it */}
-            {/* <ProfileImage imgSrc={bannerimg} alt="bannerimg" /> */}
+          {/* Right Section (Profile Image): 50% width from SM upwards */}
+          <div className="w-full sm:w-1/2 mx-auto order-1 sm:order-2 flex justify-center sm:justify-end">
+            <img
+              src={bannerimg}
+              alt="Hashibul Ahsan Shoaib"
+              // Max height is respected on all screens, preventing overflow
+              className="max-h-[60vh] sm:max-h-[85vh] w-auto"
+            />
           </div>
         </div>
       </div>

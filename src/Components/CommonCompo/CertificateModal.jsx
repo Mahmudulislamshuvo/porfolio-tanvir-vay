@@ -7,19 +7,17 @@ const customStyles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    padding: "1rem",
   },
   content: {
-    padding: 0,
+    padding: "0",
     border: "none",
     background: "none",
     overflow: "visible",
-    zIndex: 10000,
-    maxWidth: "90%",
-    maxHeight: "90%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     position: "relative",
+    inset: "auto",
+    width: "100%",
+    maxWidth: "100%",
   },
 };
 
@@ -33,29 +31,19 @@ const CerTificateModal = ({ modalIsOpen, closeModal, certificate }) => {
       style={customStyles}
       contentLabel="Certificate Modal"
     >
-      <div className="w-full h-full">
-        {/* Close button */}
-        <div className="flex justify-between items-center">
-          <button
-            onClick={closeModal}
-            className=" text-white text-xl z-50 hover:text-gray-300 transition-colors"
-          >
-            Close
-          </button>
-          <button
-            onClick={closeModal}
-            className="text-xl text-white bg-red-400 rounded-full h-8 w-8"
-          >
-            X
-          </button>
-        </div>
+      <div className="relative w-[90vw] max-w-lg rounded-lg bg-white p-2 shadow-xl md:max-w-2xl lg:max-w-4xl">
+        <button
+          onClick={closeModal}
+          className="absolute -top-3 -right-3 z-50 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white transition-colors hover:bg-red-500"
+        >
+          &times;
+        </button>
 
-        {/* Certificate Image */}
         {certificate && (
           <img
             src={certificate.image}
             alt={certificate.title}
-            className="max-w-[800px] max-h-[500px] object-contain"
+            className="h-auto w-full rounded-md object-contain max-h-[85vh]"
           />
         )}
       </div>
