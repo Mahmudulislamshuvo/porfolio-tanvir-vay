@@ -6,7 +6,7 @@ import { FaHandPointRight } from "react-icons/fa";
 const AboutMe = () => {
   return (
     // The green background wrapper is perfect as it is.
-    <div className="py-8 md:py-5 sm:py-3">
+    <div className="py-8 md:py-5 sm:py-3 bg-chosenBackground">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:gap-8">
           {/* === Column 1: About Me === 
@@ -103,7 +103,7 @@ const AboutMe = () => {
                 intelligent and interconnected systems for the future..
               </p>
             </div>
-            <ul className="space-y-4 mt-2">
+            <ul className="space-y-4 mt-10 lg:mt-8 md:mt-6 sm:mt-4">
               <li className="flex items-center gap-x-2">
                 <FaHandPointRight className="text-blue-500 animate-bounce flex-shrink-0" />
                 <a
