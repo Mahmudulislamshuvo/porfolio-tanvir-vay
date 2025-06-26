@@ -15,24 +15,29 @@ const Footer = ({
   ];
 
   return (
-    <div className="bg-primary py-[70px]">
-      <div className="container">
-        <div className="flex flex-col lg:flex-row justify-between items-center">
-          <ul className="flex gap-8 text-white pt-5">
+    // Responsive vertical padding for the footer section
+    <div className="bg-primary py-12 md:py-16">
+      {/* Using the robust, full-width container to match the rest of your site */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
+          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-white lg:justify-start">
             {links.map((link) => (
               <li
                 key={link.id}
                 onClick={() => scrollToSection(link.ref)}
-                className="cursor-pointer py-2 px-4 hover:bg-white hover:text-primary rounded-lg transition-colors duration-300"
+                className="cursor-pointer rounded-lg px-3 py-2 text-base font-medium transition-colors duration-300 hover:bg-white hover:text-primary"
               >
                 {link.name}
               </li>
             ))}
           </ul>
 
-          {/* Email section */}
-          <div className="mt-8 lg:mt-0 text-center lg:text-right">
-            <a href="mailto:aahsan.cs@gmail.com" className="text-white text-lg">
+          {/* Email section - no changes needed, it adapts well */}
+          <div className="text-center lg:text-right">
+            <a
+              href="mailto:aahsan.cs@gmail.com"
+              className="text-white text-lg hover:underline"
+            >
               aahsan.cs@gmail.com
             </a>
           </div>
