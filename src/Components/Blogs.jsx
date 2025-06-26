@@ -32,7 +32,8 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="bg-background py-[100px]">
+    // <div className="bg-background py-[100px]">
+    <div className="bg-chosenBackground py-[100px]">
       <div className="container">
         <div>
           <PortfolioBlogHeadings

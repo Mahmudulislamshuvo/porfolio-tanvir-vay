@@ -2,7 +2,8 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Consultation = () => {
   return (
-    <div className="bg-white py-14">
+    <div className="bg-chosenBackground py-14">
+      {/* <div className="bg-white py-14"> */}
       <div className="container">
         <div className="h-[500px] w-full px-10 relative">
           <img

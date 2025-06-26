@@ -3,7 +3,8 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Feature = () => {
   return (
-    <div className="bg-[#ededed] py-[35px]">
+    <div className="bg-chosenBackground py-[35px]">
+      {/* <div className="bg-[#ededed] py-[35px]"> */}
       <div className="container">
         <div className="text-center">
           <h2 className="text-primary text-5xl">Featured</h2>
