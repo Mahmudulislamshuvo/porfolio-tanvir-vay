@@ -1,5 +1,4 @@
 import bannerimg from "../assets/Image.png";
-// import bannerimg from "../assets/IMG_6166 (2).png";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import { useEffect, useState } from "react";
 
@@ -35,11 +34,13 @@ const Banner = ({ scrollToSection, footerRef }) => {
   }, [text, isDeleting, fullText, speed]);
 
   return (
-    <div className="bg-chosenBackground">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-stretch md:gap-6 lg:gap-10 mt-15 ">
+    // THE FIX: Removed `items-center`. Added `flex-col` to make it a vertical flex container.
+    <div className="bg-chosenBackground min-h-screen flex flex-col">
+      {/* THE FIX: Added `flex-grow` to make this container fill the available vertical space. */}
+      <div className="w-full flex-grow flex px-4 sm:px-6 lg:px-12">
+        <div className="flex w-full flex-col md:flex-row md:items-stretch md:gap-6 lg:gap-10">
           {/* Vertical Line wrapper */}
-          <div className="hidden md:block py-[135px] lg:py-[135px]">
+          <div className="hidden md:flex items-center py-[175px]">
             <div className="relative h-full w-[2px] bg-[#ededed]">
               <p
                 className="absolute whitespace-nowrap"
@@ -67,14 +68,13 @@ const Banner = ({ scrollToSection, footerRef }) => {
           </div>
 
           {/* Text content block */}
-          <div className="order-2 w-full px-4 text-center sm:text-left md:order-1 md:w-1/2 mt-8 md:mt-0">
+          <div className="order-2 flex w-[30%] flex-col justify-center px-4 text-center sm:text-left md:order-1 md:w-1/2 mt-8 md:mt-0">
             <h1 className="text-6xl font-bold leading-none text-primary sm:text-7xl md:text-8xl lg:text-[140px] xl:text-[180px] 2xl:text-[220px]">
               Hello
             </h1>
             <p className="mt-2 text-lg sm:pl-2 md:text-xl lg:text-2xl">
               This is <span className="font-bold">{text}</span>
             </p>
-
             <button
               onClick={() => scrollToSection(footerRef)}
               className="mx-auto mt-12 flex items-center gap-x-3 text-lg text-secondary md:mx-0 md:mt-20 md:text-xl"
@@ -84,11 +84,11 @@ const Banner = ({ scrollToSection, footerRef }) => {
           </div>
 
           {/* Image content block */}
-          <div className="order-1 mx-auto flex w-full items-end justify-center md:order-2 md:w-1/2 md:justify-end">
+          <div className=" order-1 mx-auto flex w-[68%] items-end justify-center md:order-2 md:w-1/2 md:justify-end">
             <img
               src={bannerimg}
               alt="Hashibul Ahsan Shoaib"
-              className="w-auto max-h-[60vh] md:h-[95vh] object-contain object-bottom"
+              className="w-auto max-h-[90vh] md:max-h-full object-contain object-bottom sm:pt-[50px]"
             />
           </div>
         </div>
