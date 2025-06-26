@@ -13,7 +13,7 @@ const Publication = () => {
       journal: "IEEE Open Journal of the Computer Society",
       year: 2025,
       publicationType: "Journal article",
-      doi: "10.1109/OJCS.2025.3552376",
+      doi: "DOI: 10.1109/OJCS.2025.3552376",
       link: "https://doi.org/10.1109/ojcs.2025.3552376",
     },
     {
@@ -24,7 +24,7 @@ const Publication = () => {
       journal: "Intelligent Systems with Applications",
       year: 2025,
       publicationType: "Journal article",
-      doi: "10.1016/j.iswa.2025.200537",
+      doi: "DOI: 10.1016/j.iswa.2025.200537",
       link: "https://doi.org/10.1016/j.iswa.2025.200537",
     },
     {
@@ -36,7 +36,7 @@ const Publication = () => {
         "IEEE Conference on Computing Applications and Systems, COMPAS 2024",
       year: 2024,
       publicationType: "Conference paper",
-      doi: "10.1145/3723178.3723232",
+      doi: "DOI: 10.1145/3723178.3723232",
       link: "https://doi.org/10.1145/3723178.3723232",
     },
     {
@@ -48,7 +48,7 @@ const Publication = () => {
         "IEEE Conference on Computing Applications and Systems, COMPAS 2024",
       year: 2024,
       publicationType: "Conference paper",
-      doi: "10.1145/3723178.3723226",
+      doi: "DOI: 10.1145/3723178.3723226",
       link: "https://doi.org/10.1145/3723178.3723226",
     },
     {
@@ -59,7 +59,7 @@ const Publication = () => {
         "IEEE Conference on Computing Applications and Systems, COMPAS 2024",
       year: 2024,
       publicationType: "Conference paper",
-      doi: "10.1109/COMPAS60761.2024.10796330",
+      doi: "DOI: 10.1109/COMPAS60761.2024.10796330",
       link: "https://doi.org/10.1109/compas60761.2024.10796330",
     },
     {
@@ -70,30 +70,22 @@ const Publication = () => {
       journal: "Studies in Big Data",
       year: 2024,
       publicationType: "Book chapter",
-      doi: "10.1007/978-981-97-3966-0_8",
+      doi: "DOI: 10.1007/978-981-97-3966-0_8",
       link: "https://doi.org/10.1007/978-981-97-3966-0_8",
     },
   ];
 
   return (
-    <div className="bg-chosenBackground py-16 md:py-24">
+    <div className="bg-chosenBackground py-8 md:py-6 sm:py-4">
       {/* Using the wide, robust container to match your site's layout */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-12 lg:mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-5 lg:mb-4 sm:mb-2">
             Publications
           </h2>
         </div>
-
-        {/* RESPONSIVE GRID LAYOUT:
-            - 1 column on mobile, 2 columns on tablets and up.
-            - `gap-8` provides consistent spacing.
-        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {publications.map((publication) => (
-            // CARD CONTAINER:
-            // - `flex` and `flex-col` to structure content vertically.
-            // - `h-full` makes cards in the same row equal height.
             <div
               key={publication.id}
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 p-6 shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-200/80"

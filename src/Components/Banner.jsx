@@ -1,4 +1,4 @@
-import bannerimg from "../assets/Image.png";
+import bannerimg from "../assets/NewTry.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import { useEffect, useState } from "react";
 
@@ -68,7 +68,7 @@ const Banner = ({ scrollToSection, footerRef }) => {
           </div>
 
           {/* Text content block */}
-          <div className="order-2 flex w-[30%] flex-col justify-center px-4 text-center sm:text-left md:order-1 md:w-1/2 mt-8 md:mt-0">
+          <div className="order-2 flex w flex-col justify-center px-4 text-center sm:text-left md:order-1 md:w-1/2 mt-8 md:mt-0">
             <h1 className="text-6xl font-bold leading-none text-primary sm:text-7xl md:text-8xl lg:text-[140px] xl:text-[180px] 2xl:text-[220px]">
               Hello
             </h1>
@@ -84,11 +84,11 @@ const Banner = ({ scrollToSection, footerRef }) => {
           </div>
 
           {/* Image content block */}
-          <div className=" order-1 mx-auto flex w-[68%] items-end justify-center md:order-2 md:w-1/2 md:justify-end">
+          <div className=" order-1 mx-auto flex w-full items-end justify-center md:order-2 md:w-1/2 md:justify-end">
             <img
               src={bannerimg}
               alt="Hashibul Ahsan Shoaib"
-              className="w-auto max-h-[90vh] md:max-h-full object-contain object-bottom sm:pt-[50px]"
+              className="md:max-h-full object-contain object-bottom sm:pt-[50px] h-[100%]"
             />
           </div>
         </div>

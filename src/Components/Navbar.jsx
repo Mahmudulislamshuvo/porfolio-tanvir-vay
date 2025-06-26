@@ -30,7 +30,7 @@ const Navbar = ({
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b-[2px] border-[#ededed] bg-white/80 backdrop-blur-sm">
+    <nav className="w-full border-b-[2px] border-[#ededed] bg-white/80 backdrop-blur-sm">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Desktop Menu */}

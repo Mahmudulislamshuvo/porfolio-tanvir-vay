@@ -21,7 +21,7 @@ const EducationCard = ({
         <div className="relative flex h-full flex-col items-center p-6 text-center md:flex-row md:items-start md:space-x-6 md:p-8 md:text-left">
           {/* Icon with animated border */}
           <div className="relative flex-shrink-0">
-            <div className="absolute -inset-1.5 rounded-xl bg-gradient-to-r from-blue-100 to-purple-100 opacity-75 blur-sm transition-all duration-500 group-hover:opacity-100 z-0"></div>
+            <div className="absolute -inset-1.5 rounded-xl bg-gradient-to-r from-gray-100 to-gray-100 opacity-75 blur-sm transition-all duration-500 group-hover:opacity-100 z-0"></div>
             <div className="relative z-10 rounded-xl bg-white p-2 shadow-md">
               {/* FIXED: Used standard and responsive h/w classes */}
               <img
@@ -34,7 +34,7 @@ const EducationCard = ({
 
           <div className="mt-5 flex h-full w-full flex-col md:mt-0">
             {/* FIXED: Responsive text size and completed the gradient text effect */}
-            <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-500 md:text-2xl">
+            <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gray-500 md:text-2xl">
               {degree}
             </h3>
 
@@ -48,7 +48,7 @@ const EducationCard = ({
                 <p className="text-sm font-semibold text-gray-500">{group}</p>
               )}
               {/* The animated underline */}
-              <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-purple-400 transition-all duration-500 group-hover:w-full"></div>
+              <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gray-400 transition-all duration-500 group-hover:w-full"></div>
             </div>
 
             {/* Pushed duration to the bottom of the card for better layout */}

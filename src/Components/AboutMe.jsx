@@ -6,16 +6,7 @@ import { FaHandPointRight } from "react-icons/fa";
 const AboutMe = () => {
   return (
     // The green background wrapper is perfect as it is.
-    <div className="py-16 md:py-24">
-      {/* === THE FIX ===
-        I have replaced the problematic `<div class="container">` with a more robust,
-        manually-built container. This new div does the following:
-        - `w-full`: Ensures it takes up the full width of the green background.
-        - `max-w-7xl`: Sets a maximum width for very large screens (like the original container).
-        - `mx-auto`: Centers the container on the page.
-        - `px-4 sm:px-6 lg:px-8`: Provides responsive padding on the sides.
-        This combination solves the overflow issue completely.
-      */}
+    <div className="py-8 md:py-5 sm:py-3">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:gap-8">
           {/* === Column 1: About Me === 
@@ -29,16 +20,27 @@ const AboutMe = () => {
             <p className="text-secondary pt-6 leading-relaxed">
               I am Hashibul Ahsan Shoaib - an IT professional and researcher
               with a robust academic background and a fervor for technological
-              innovation. I hold two master's degrees — one in Information
+              innovation. I hold two master&#39;s degrees — one in Information
               Technology from St. Francis College, New York, and another in
-              Applied Physics and Electronics from Jahangirnagar University — in
-              addition to a Bachelor’s degree in Electrical & Electronics
-              Engineering from Bangladesh University of Business & Technology.
-              This educational background equips me with a distinctive
-              combination of technical skills and interdisciplinary knowledge.
-              At present, I work as an IT Administrator at an HVAC company,
-              where I oversee systems, address technical issues, and ensure
-              seamless operations...
+              Applied Physics and Electronics from Jahangirnagar University - in
+              addition to a Bachelor’s degree in Electrical &amp; Electronics
+              Engineering from Bangladesh University of Business &amp;
+              Technology. This educational background equips me with a
+              distinctive combination of technical skills and interdisciplinary
+              knowledge.
+              <br />
+              <br />
+              <span className="text-secondary leading-relaxed">
+                At present, I work as an IT Administrator at an HVAC company,
+                where I oversee systems, address technical issues, and ensure
+                seamless operations behind the scenes. My responsibilities
+                encompass system integration, data security, user assistance,
+                digital transformation, and the implementation of scalable IT
+                solutions that meet the changing demands of the business. This
+                includes projects related to Enterprise Resource Planning (ERP),
+                remote monitoring, and system integration that improve
+                operational efficiency.
+              </span>
             </p>
           </div>
 
@@ -47,10 +49,10 @@ const AboutMe = () => {
             to give space inside the white card.
           */}
           <div className="w-full lg:w-[30%] bg-white rounded-xl p-6 mt-12 lg:mt-0">
-            <h2 className="text-primary text-3xl font-bold text-start mb-4">
+            <h2 className="text-primary text-3xl font-bold text-start mb-1">
               My research
             </h2>
-            <p className="text-secondary text-start mb-6 leading-relaxed">
+            <p className="text-secondary text-start leading-relaxed">
               My research and technical interests are deeply rooted in Deep
               Learning and Artificial Intelligence... I focus on predicting
               potential purchasers using AutoGluon ensemble frameworks...
@@ -98,8 +100,8 @@ const AboutMe = () => {
                 Learning...
               </p>
             </div>
-            <ul className="space-y-4 mt-8">
-              <li className="flex items-center gap-x-3">
+            <ul className="space-y-4 mt-2">
+              <li className="flex items-center gap-x-2">
                 <FaHandPointRight className="text-blue-500 animate-bounce flex-shrink-0" />
                 <a
                   href="https://scholar.google.com/citations?user=3G8WUu0AAAAJ&hl=en&oi=ao"

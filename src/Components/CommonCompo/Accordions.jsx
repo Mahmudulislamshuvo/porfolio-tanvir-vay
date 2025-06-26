@@ -4,9 +4,6 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { GoDotFill } from "react-icons/go";
-import { MdArrowOutward } from "react-icons/md";
-import ExperiencesSlider from "./ExperiencesSilder";
 
 function Icon({ id, open }) {
   return (
@@ -35,7 +32,7 @@ export default function AccordionCustomIcon({ experienceData }) {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className="w-full mx-auto py-8">
+    <div className="w-full mx-auto py-2 sm:py-1">
       {experienceData.map((project) => (
         <Accordion
           key={project.id}

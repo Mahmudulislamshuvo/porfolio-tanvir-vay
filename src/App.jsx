@@ -6,14 +6,11 @@ import Banner from "./Components/Banner";
 import Experiences from "./Components/Experiences";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import Academics from "./Components/Academics";
 import Publication from "./Components/Publication";
 import Feature from "./Components/Feature";
 import Certifications from "./Components/Certifications";
-
-AOS.init();
 
 const App = () => {
   // Create refs for each section
@@ -35,7 +32,6 @@ const App = () => {
 
   return (
     <div>
-      <div data-aos="fade-up">Your animated content</div>
       <section ref={homeRef}>
         <Navbar
           scrollToSection={scrollToSection}
