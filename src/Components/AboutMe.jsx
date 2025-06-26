@@ -95,9 +95,12 @@ const AboutMe = () => {
                 Beyond the realm of technology, I am passionate about cricket,
                 enjoy writing poetry, love to travel, and have a keen interest
                 in photography. I hold the belief that creativity and technology
-                are intertwined... I invite you to accompany me as I explore the
-                ever-evolving landscape of Information Technology and Deep
-                Learning...
+                are intertwined — whether it involves crafting a poem, capturing
+                a sunset, or developing an advanced algorithm. I invite you to
+                accompany me as I explore the ever-evolving landscape of
+                Information Technology and Deep Learning, fueled by an
+                insatiable curiosity and a dedication to creating more
+                intelligent and interconnected systems for the future..
               </p>
             </div>
             <ul className="space-y-4 mt-2">

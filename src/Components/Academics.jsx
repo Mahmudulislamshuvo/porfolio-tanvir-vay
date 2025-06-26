@@ -15,7 +15,10 @@ const Academics = () => {
         <h1 className="text-center text-4xl sm:text-5xl font-bold text-primary pb-5 lg:mb-4">
           Academics
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* এইখানে পরিবর্তন করা হয়েছে। lg:grid-cols-2 ক্লাসটি সরিয়ে ফেলা হয়েছে।
+          ফলে এখন ছোট-বড় সব স্ক্রিনেই একটি কলাম দেখাবে।
+        */}
+        <div className="grid grid-cols-1 gap-8">
           <EducationCard
             degree="Master of Science In Information Technology (IT)"
             institution="St Francis College, Brooklyn, New York"
