@@ -84,15 +84,22 @@ export default function Slider() {
 
   const [isModalOpen, setIsOpen] = useState(false);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
-
   const [expandedId, setExpandedId] = useState(null);
-
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [swiperReady, setSwiperReady] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     setSwiperReady(true);
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const openModal = (certificate) => {
@@ -106,73 +113,83 @@ export default function Slider() {
   };
 
   const handleSeeMore = (id) => {
-    if (expandedId === id) {
-      setExpandedId(null);
-    } else {
-      setExpandedId(id);
-    }
+    setExpandedId(expandedId === id ? null : id);
   };
 
-  const truncateTitle = (title) => {
-    const threshold = 100;
-    return title.length > threshold ? title.slice(0, threshold) + "..." : title;
+  const truncateTitle = (title, maxLength = 100) => {
+    return title.length > maxLength ? title.slice(0, maxLength) + "..." : title;
   };
 
   return (
-    <div className="container relative z-10">
+    <div className="container relative z-10 w-full">
       {swiperReady && (
         <Swiper
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
           }}
-          slidesPerView={3}
-          spaceBetween={30}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
           freeMode={true}
           loop={true}
           pagination={{
             clickable: true,
+            dynamicBullets: true,
           }}
           modules={[FreeMode, Pagination, Navigation]}
           className="mySwiper"
           style={{ zIndex: 1 }}
         >
           {Data.map((item) => (
-            <SwiperSlide key={item.id} className="!z-0 ">
-              <div className="w-[450px] p-5 group">
+            <SwiperSlide key={item.id} className="!z-0">
+              <div className="w-full  p-2 sm:p-3 md:p-4 lg:p-5 group">
                 <div className="relative">
-                  <img
-                    onClick={() => openModal(item)}
-                    className="object-cover overflow-hidden rounded-xl w-[380px] h-[300px]"
-                    src={item.image}
-                    alt={item.id}
-                  />
-                  <div className="w-20 h-20 bg-secondary rounded-full text-center flex justify-center items-center absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <MdArrowOutward className="text-white w-10 h-10" />
+                  <div className="flex justify-center items-center h-[30vh] sm:h-[35vh] md:h-[40vh] w-full overflow-hidden rounded-xl">
+                    <img
+                      onClick={() => openModal(item)}
+                      className="object-contain w-auto h-full rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105"
+                      src={item.image}
+                      alt={item.title}
+                    />
+                  </div>
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-secondary rounded-full text-center flex justify-center items-center absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <MdArrowOutward className="text-white w-8 h-8 md:w-10 md:h-10" />
                   </div>
                 </div>
 
-                {/* Title with "See more" functionality */}
-                <h4 className="text-primary text-[20px] pt-2">
-                  {expandedId === item.id
-                    ? item.title
-                    : truncateTitle(item.title)}{" "}
+                <div className="pt-2 md:pt-3">
+                  <h4 className="text-primary text-sm sm:text-base md:text-lg">
+                    {expandedId === item.id
+                      ? item.title
+                      : truncateTitle(item.title, windowWidth < 640 ? 80 : 100)}
+                  </h4>
                   {item.title.length > 100 && (
                     <button
                       onClick={() => handleSeeMore(item.id)}
-                      className="text-sm text-blue-600 mt-2"
+                      className="text-xs sm:text-sm text-blue-600 mt-1 md:mt-2"
                     >
                       {expandedId === item.id ? "See less" : "See more"}
                     </button>
                   )}
-                </h4>
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       )}
 
-      {/* Modal Component */}
       {isModalOpen && (
         <CerTificateModal
           modalIsOpen={isModalOpen}
@@ -181,19 +198,28 @@ export default function Slider() {
         />
       )}
 
-      {/* Navigation buttons */}
+      {/* Navigation buttons - Hidden on mobile */}
       <div
         ref={prevRef}
-        className="custom-swiper-button-prev h-15 w-15 rounded-full bg-secondary text-white flex justify-center items-center cursor-pointer absolute top-[45%] left-5 -translate-y-1/2 z-10"
+        className={`${
+          windowWidth < 640 ? "hidden" : "flex"
+        } custom-swiper-button-prev h-10 w-10 md:h-12 md:w-12 rounded-full bg-secondary text-white justify-center items-center cursor-pointer absolute top-[45%] left-0 md:left-2 -translate-y-1/2 z-10`}
       >
-        <MdKeyboardArrowLeft className="text-3xl" />
+        <MdKeyboardArrowLeft className="text-2xl md:text-3xl" />
       </div>
       <div
         ref={nextRef}
-        className="custom-swiper-button-next h-15 w-15 rounded-full bg-secondary text-white flex justify-center items-center cursor-pointer absolute top-[45%] right-0 -translate-y-1/2 z-10"
+        className={`${
+          windowWidth < 640 ? "hidden" : "flex"
+        } custom-swiper-button-next h-10 w-10 md:h-12 md:w-12 rounded-full bg-secondary text-white justify-center items-center cursor-pointer absolute top-[45%] right-0 md:right-2 -translate-y-1/2 z-10`}
       >
-        <RiArrowRightSLine className="text-3xl" />
+        <RiArrowRightSLine className="text-2xl md:text-3xl" />
       </div>
+
+      {/* Mobile pagination indicator */}
+      {windowWidth < 640 && (
+        <div className="swiper-pagination flex justify-center mt-4 space-x-2"></div>
+      )}
     </div>
   );
 }
