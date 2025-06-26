@@ -47,7 +47,7 @@ const Navbar = ({
               </li>
               <li>
                 <button onClick={() => scrollToSection(featureRef)}>
-                  Feature
+                  Featured
                 </button>
               </li>
             </ul>

@@ -11,7 +11,7 @@ const Footer = ({
     { name: "Experiences", id: "experiences", ref: experiencesRef },
     { name: "Publications", id: "publications", ref: publicationsRef },
     { name: "Certifications", id: "certifications", ref: certificationsRef },
-    { name: "Features", id: "features", ref: featureRef },
+    { name: "Featured", id: "features", ref: featureRef },
   ];
 
   return (
