@@ -11,6 +11,13 @@
   --color-secondary: #7b7b7b;
   --color-white: #fff;
   --color-chosenBackground: #f3f3f3;
+  --breakpoint-xs-max: 639;
+}
+
+@custom-variant --portrait-tablet (@media (min-width: 320px) and (max-width: 639px)) {
+  .bg-coloor {
+    background-color: "f4g4f4";
+  }
 }
 
 body {

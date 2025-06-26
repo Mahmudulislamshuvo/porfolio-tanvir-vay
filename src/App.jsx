@@ -67,7 +67,7 @@ const App = () => {
       </section>
 
       <section ref={featureRef}>
-        <Feature />
+        <Feature scrollToSection={scrollToSection} homeRef={homeRef} />
       </section>
 
       <section ref={footerRef}>

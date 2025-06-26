@@ -1,6 +1,7 @@
 import { FaHandPointRight } from "react-icons/fa";
+import { MdOutlineArrowUpward } from "react-icons/md";
 
-const Feature = () => {
+const Feature = ({ scrollToSection, homeRef }) => {
   return (
     // Responsive vertical padding for the section
     <div className="bg-chosenBackground py-8 md:py-6 sm:py-4">
@@ -32,6 +33,12 @@ const Feature = () => {
             <span>Full Summary</span>
           </a>
         </div>
+        <button
+          onClick={() => scrollToSection(homeRef)}
+          className="mx-auto mt-12 flex items-center gap-x-3 text-lg text-secondary md:mx-0 md:mt-20 md:text-xl"
+        >
+          Scroll Up <MdOutlineArrowUpward />
+        </button>
       </div>
     </div>
   );
