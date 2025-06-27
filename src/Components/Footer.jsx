@@ -16,7 +16,7 @@ const Footer = ({
 
   return (
     // Responsive vertical padding for the footer section
-    <div className="bg-primary py-12 md:py-16">
+    <div className="bg-gray-600 py-12 md:py-16">
       {/* Using the robust, full-width container to match the rest of your site */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">

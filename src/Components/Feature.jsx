@@ -1,24 +1,16 @@
 import { FaHandPointRight } from "react-icons/fa";
+import { MdOutlineArrowUpward } from "react-icons/md";
 
-const Feature = () => {
+const Feature = ({ scrollToSection, homeRef }) => {
   return (
     // Responsive vertical padding for the section
-    <div className="bg-chosenBackground py-16 md:py-24">
-      {/* Using a robust, centered container. 
-        max-w-4xl is a good width for a text-focused section to ensure readability.
-      */}
+    <div className="bg-chosenBackground py-8 md:py-6 sm:py-4">
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Responsive heading */}
           <h2 className="text-primary text-4xl sm:text-5xl font-bold">
             Featured
           </h2>
-
-          {/* RESPONSIVE PARAGRAPH:
-            - Removed the harmful `px-[300px]`.
-            - `max-w-3xl mx-auto` keeps the paragraph nicely centered and readable within the container.
-            - `text-left` aligns the text inside the block, as intended.
-          */}
           <p className="text-secondary mt-6 mb-10 max-w-3xl mx-auto text-left text-base md:text-lg leading-relaxed">
             After completing my Bachelor's in Electrical and Electronic
             Engineering from BUBT, I started my career at bKash as a Merchant
@@ -31,11 +23,6 @@ const Feature = () => {
             aiming to contribute to the global IT industry...
           </p>
 
-          {/* CORRECTED LINK:
-            - Replaced the <button> with an <a> tag for correct semantics and accessibility.
-            - Styled the link to look like the original button.
-            - Added a subtle hover effect.
-          */}
           <a
             href="https://tinyurl.com/5bhsaepm"
             target="_blank"
@@ -46,6 +33,12 @@ const Feature = () => {
             <span>Full Summary</span>
           </a>
         </div>
+        <button
+          onClick={() => scrollToSection(homeRef)}
+          className="mx-auto mt-12 flex items-center gap-x-3 text-lg text-secondary md:mx-0 md:mt-20 md:text-xl"
+        >
+          Scroll Up <MdOutlineArrowUpward />
+        </button>
       </div>
     </div>
   );
