@@ -20,19 +20,19 @@ const Academics = () => {
         */}
         <div className="grid grid-cols-1 gap-8">
           <EducationCard
-            degree="Master of Science In Information Technology (IT)"
+            degree="Master of Science in Information Technology (IT)"
             institution="St Francis College, Brooklyn, New York"
             icon={sfsLogo}
             duration="2024 - 2025"
           />
           <EducationCard
-            degree="Master of Science In Applied Physics & Electronics Engineering (APE)"
+            degree="Master of Science in Applied Physics & Electronics Engineering (APE)"
             institution="Jahangirnagar University, Dhaka"
             icon={jahangir}
             duration="2021 - 2022"
           />
           <EducationCard
-            degree="Bachelor of Science In Electrical & Electronic Engineering (EEE)"
+            degree="Bachelor of Science in Electrical & Electronic Engineering (EEE)"
             institution="Bangladesh University of Business & Technology, Dhaka"
             icon={bubt}
             duration="2016 - 2020"
