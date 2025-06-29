@@ -52,7 +52,7 @@ export default function AccordionCustomIcon({ experienceData }) {
                     <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
                       {project.title}
                     </h3>
-                    <p className="text-lg text-gray-500">{project.subtitle}</p>
+                    <p className="text-sm text-gray-500">{project.subtitle}</p>
                     <p className="text-base text-gray-500">
                       {project.location}
                     </p>
@@ -60,7 +60,7 @@ export default function AccordionCustomIcon({ experienceData }) {
 
                   {/* Period */}
 
-                  <span className="text-sm font-medium text-gray-500 tracking-wide text-start pr-5">
+                  <span className="text-sm font-medium text-gray-500 tracking-wide text-start pr-5 whitespace-nowrap">
                     {project.period}
                   </span>
                 </div>
