@@ -159,7 +159,7 @@ Netlify, Vercel বা GitHub Pages এ সহজেই ডেপ্লয় �
 
 - **নাম:** মাহমুদুল ইসলাম
 - **ইমেইল:** [mahmudulislammern@gmail.com](mailto:mahmudulislammern@gmail.com)
-- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- **LinkedIn:** [https://www.linkedin.com/in/mahmudul-islam-shuvo/](https://www.linkedin.com/in/mahmudul-islam-shuvo/)
 - **GitHub:** [github.com/Mahmudulislamshuvo](https://github.com/Mahmudulislamshuvo)
 
 ---
@@ -327,7 +327,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 - **Name:** Mahmudul Islam
 - **Email:** [mahmudulislammern@gmail.com](mailto:mahmudulislammern@gmail.com)
-- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- **LinkedIn:** [https://www.linkedin.com/in/mahmudul-islam-shuvo/](https://www.linkedin.com/in/mahmudul-islam-shuvo/)
 - **GitHub:** [github.com/Mahmudulislamshuvo](https://github.com/Mahmudulislamshuvo)
 
 ---
