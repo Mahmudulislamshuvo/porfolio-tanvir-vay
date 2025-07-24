@@ -2,7 +2,7 @@ import bannerimg from "../assets/NewTry.png";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import { useEffect, useState } from "react";
 
-const Banner = ({ scrollToSection, footerRef }) => {
+const Banner = ({ scrollToSection, footerRef, menuOpen }) => {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed, setSpeed] = useState(150);
@@ -35,7 +35,11 @@ const Banner = ({ scrollToSection, footerRef }) => {
 
   return (
     // THE FIX: Removed `items-center`. Added `flex-col` to make it a vertical flex container.
-    <div className="bg-chosenBackground 2xl:min-h-screen flex flex-col">
+    <div
+      className={`bg-chosenBackground 2xl:min-h-screen flex flex-col ${
+        menuOpen ? "mt-[-320px]" : ""
+      }`}
+    >
       {/* THE FIX: Added `flex-grow` to make this container fill the available vertical space. */}
       <div className="w-full flex-grow flex px-4 sm:px-6 lg:px-12">
         <div className="flex w-full flex-col md:flex-row md:items-stretch md:gap- lg:gap-2">
