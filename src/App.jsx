@@ -1,8 +1,6 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import AboutMe from "./Components/AboutMe";
 import Banner from "./Components/Banner";
-// import Blogs from "./Components/Blogs";
-// import Consultation from "./Components/Consultation";
 import Experiences from "./Components/Experiences";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
@@ -11,75 +9,60 @@ import Academics from "./Components/Academics";
 import Publication from "./Components/Publication";
 import Feature from "./Components/Feature";
 import Certifications from "./Components/Certifications";
+import { navLinks } from "./navLinks";
 
 const App = () => {
-  // Create refs for each section
-  const aboutMeRef = useRef(null);
-  const academicsRef = useRef(null);
-  const experiencesRef = useRef(null);
-  const certificationsRef = useRef(null);
-  const publicationsRef = useRef(null);
-  const footerRef = useRef(null);
-  const homeRef = useRef(null);
-  const featureRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const sectionRefs = {
+    home: useRef(null),
+    about: useRef(null),
+    academics: useRef(null),
+    experiences: useRef(null),
+    publications: useRef(null),
+    certifications: useRef(null),
+    features: useRef(null),
+    footer: useRef(null),
+  };
 
-  // Scroll to section when clicking on navbar items
   const scrollToSection = (ref) => {
-    console.log(ref);
-
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div>
-      <section ref={homeRef}>
+      <section ref={sectionRefs.home}>
         <Navbar
           scrollToSection={scrollToSection}
-          aboutMeRef={aboutMeRef}
-          academicsRef={academicsRef}
-          experiencesRef={experiencesRef}
-          publicationsRef={publicationsRef}
-          certificationsRef={certificationsRef}
-          featureRef={featureRef}
+          sectionRefs={sectionRefs}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
         />
       </section>
 
-      <Banner scrollToSection={scrollToSection} footerRef={footerRef} />
+      <Banner
+        scrollToSection={scrollToSection}
+        footerRef={sectionRefs.footer}
+        menuOpen={menuOpen}
+      />
 
-      <section ref={aboutMeRef}>
-        <AboutMe />
-      </section>
+      {navLinks.map((link) => (
+        <section key={link.id} ref={sectionRefs[link.id]}>
+          {link.id === "about" && <AboutMe />}
+          {link.id === "academics" && <Academics />}
+          {link.id === "experiences" && <Experiences />}
+          {link.id === "publications" && <Publication />}
+          {link.id === "certifications" && <Certifications />}
+          {link.id === "features" && (
+            <Feature
+              scrollToSection={scrollToSection}
+              homeRef={sectionRefs.home}
+            />
+          )}
+        </section>
+      ))}
 
-      <section ref={academicsRef}>
-        <Academics />
-      </section>
-
-      <section ref={experiencesRef}>
-        <Experiences />
-      </section>
-
-      <section ref={publicationsRef}>
-        <Publication />
-      </section>
-
-      <section ref={certificationsRef}>
-        <Certifications />
-      </section>
-
-      <section ref={featureRef}>
-        <Feature scrollToSection={scrollToSection} homeRef={homeRef} />
-      </section>
-
-      <section ref={footerRef}>
-        <Footer
-          scrollToSection={scrollToSection}
-          aboutMeRef={aboutMeRef}
-          academicsRef={academicsRef}
-          experiencesRef={experiencesRef}
-          publicationsRef={publicationsRef}
-          certificationsRef={certificationsRef}
-          featureRef={featureRef}
-        />
+      <section ref={sectionRefs.footer}>
+        <Footer scrollToSection={scrollToSection} sectionRefs={sectionRefs} />
       </section>
     </div>
   );
