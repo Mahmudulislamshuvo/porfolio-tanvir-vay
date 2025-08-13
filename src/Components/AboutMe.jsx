@@ -20,7 +20,7 @@ const AboutMe = () => {
             <p className="text-secondary pt-6 leading-relaxed">
               I am Hashibul Ahsan Shoaib - an IT professional and researcher
               with a robust academic background and a fervor for technological
-              innovation. I hold two master&#39;s degrees — one in Information
+              innovation. I hold two master&#39;s degrees - one in Information
               Technology from St. Francis College, New York, and another in
               Applied Physics and Electronics from Jahangirnagar University - in
               addition to a Bachelor’s degree in Electrical &amp; Electronics
@@ -95,7 +95,7 @@ const AboutMe = () => {
                 Beyond the realm of technology, I am passionate about cricket,
                 enjoy writing poetry, love to travel, and have a keen interest
                 in photography. I hold the belief that creativity and technology
-                are intertwined — whether it involves crafting a poem, capturing
+                are intertwined - whether it involves crafting a poem, capturing
                 a sunset, or developing an advanced algorithm. I invite you to
                 accompany me as I explore the ever-evolving landscape of
                 Information Technology and Deep Learning, fueled by an

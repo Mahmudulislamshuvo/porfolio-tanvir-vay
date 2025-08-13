@@ -8,4 +8,26 @@ export default defineConfig({
   optimizeDeps: {
     include: ["@material-tailwind/react"],
   },
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          ui: ["@material-tailwind/react", "react-icons"],
+          carousel: ["swiper", "react-slick", "slick-carousel"],
+        },
+      },
+    },
+  },
+  preview: {
+    port: 3000,
+    host: true,
+  },
+  server: {
+    host: true,
+    port: 3000,
+  },
 });

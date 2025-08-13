@@ -4,6 +4,7 @@ import { navLinks } from "../navLinks";
 const Footer = ({ scrollToSection, sectionRefs }) => {
   return (
     <div className="bg-primary py-12 md:py-16">
+    // Responsive vertical padding for the footer section
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-white lg:justify-start">
