@@ -10,6 +10,7 @@ import Publication from "./Components/Publication";
 import Feature from "./Components/Feature";
 import Certifications from "./Components/Certifications";
 import { navLinks } from "./navLinks";
+import AwardAndMemberships from "./Components/AwardAndMemberships";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -51,6 +52,7 @@ const App = () => {
           {link.id === "academics" && <Academics />}
           {link.id === "experiences" && <Experiences />}
           {link.id === "publications" && <Publication />}
+          {link.id === "awards" && <AwardAndMemberships />}
           {link.id === "certifications" && <Certifications />}
           {link.id === "features" && (
             <Feature
