@@ -1,14 +1,14 @@
 import AwardCart from "./CommonCompo/AwardsCart";
-import awardpic1 from "../assets/awards/GRA_Hashibul Shoaib_2025.png";
+import awardpic1 from "../assets/membership/Reviewer_Certificate.png";
 
-const Awards = () => {
+const Memberships = () => {
   const awards = [
     {
       id: 1,
-      title: "Hashibul Shoaib Celebrates 2025 Global Recognition Award™",
+      title: "Editorial Board Member",
       des: "Hashibul Shoaib has been recognized with a 2025 Global Recognition Award for his exceptional contributions to deep learning research...",
       image: awardpic1,
-      link: "https://globalrecognitionawards.org/winners/2025/hashibul-shoaib-recognized-with-a-2025-global-recognition-award/",
+      link: "https://al-kindipublisher.com/index.php/jcsts/about/editorialTeam",
     },
   ];
 
@@ -18,7 +18,7 @@ const Awards = () => {
       <div className="my-8">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-8">
-            Awards
+            Memberships
           </h2>
         </div>
 
@@ -27,7 +27,6 @@ const Awards = () => {
             <AwardCart
               key={award.id}
               title={award.title}
-              des={award.des}
               image={award.image}
               link={award.link}
             />
@@ -38,4 +37,4 @@ const Awards = () => {
   );
 };
 
-export default Awards;
+export default Memberships;

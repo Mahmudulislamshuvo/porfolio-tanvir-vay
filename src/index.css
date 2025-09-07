@@ -11,6 +11,9 @@
   --color-secondary: #7b7b7b;
   --color-white: #fff;
   --color-chosenBackground: #f8f8f8;
+
+  /* breakpoints */
+  --breakpoint-xs: 639px;
 }
 
 body {

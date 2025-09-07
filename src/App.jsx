@@ -10,7 +10,8 @@ import Publication from "./Components/Publication";
 import Feature from "./Components/Feature";
 import Certifications from "./Components/Certifications";
 import { navLinks } from "./navLinks";
-import AwardAndMemberships from "./Components/AwardAndMemberships";
+import Awards from "./Components/AwardAndMemberships";
+import Memberships from "./Components/Memberships";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,14 +32,14 @@ const App = () => {
 
   return (
     <div>
-      <section ref={sectionRefs.home}>
+      <div ref={sectionRefs.home}>
         <Navbar
           scrollToSection={scrollToSection}
           sectionRefs={sectionRefs}
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
         />
-      </section>
+      </div>
 
       <Banner
         scrollToSection={scrollToSection}
@@ -47,12 +48,13 @@ const App = () => {
       />
 
       {navLinks.map((link) => (
-        <section key={link.id} ref={sectionRefs[link.id]}>
+        <div key={link.id} ref={sectionRefs[link.id]}>
           {link.id === "about" && <AboutMe />}
           {link.id === "academics" && <Academics />}
           {link.id === "experiences" && <Experiences />}
           {link.id === "publications" && <Publication />}
-          {link.id === "awards" && <AwardAndMemberships />}
+          {link.id === "awards" && <Awards />}
+          {link.id === "Memberships" && <Memberships />}
           {link.id === "certifications" && <Certifications />}
           {link.id === "features" && (
             <Feature
@@ -60,12 +62,12 @@ const App = () => {
               homeRef={sectionRefs.home}
             />
           )}
-        </section>
+        </div>
       ))}
 
-      <section ref={sectionRefs.footer}>
+      <div ref={sectionRefs.footer}>
         <Footer scrollToSection={scrollToSection} sectionRefs={sectionRefs} />
-      </section>
+      </div>
     </div>
   );
 };
