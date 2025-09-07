@@ -90,11 +90,18 @@ export default function AccordionCustomIcon({ experienceData }) {
                   </button>
                 </div>
               </div> */}
-              <ol className="list-disc pl-5 space-y-2 text-base text-gray-800">
-                {project.orderlist.map((orderlist) => (
-                  <li key={orderlist.id}>{orderlist.task}</li>
-                ))}
-              </ol>
+              {project.title === "Founder & COO" ||
+              project.title === "Researcher" ? (
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  {project.desc}
+                </p>
+              ) : (
+                <ol className="list-disc pl-5 space-y-2 text-base text-gray-800">
+                  {project.orderlist.map((order) => (
+                    <li key={order.id}>{order.task}</li>
+                  ))}
+                </ol>
+              )}
             </AccordionBody>
           </div>
         </Accordion>

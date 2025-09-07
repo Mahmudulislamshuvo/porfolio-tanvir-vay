@@ -4,6 +4,15 @@ const Experiences = () => {
   const projects = [
     {
       id: 1,
+      title: "Founder & COO",
+      subtitle: "PoshgigX LLC",
+      location: "New York",
+      period: "2025 - Present",
+      desc: "At PoshGigx, we love turning ideas into websites and apps that actually work for you. Whether it’s a personal site, an online store, or a business app, we build it with care so it looks good, runs smooth, and feels easy to use. Our goal is simple: help you get online and grow without the stress.",
+    },
+
+    {
+      id: 2,
       title: "IT Administrator",
       subtitle: "Superior Hvac",
       location: "New York",
@@ -56,7 +65,15 @@ const Experiences = () => {
       ],
     },
     {
-      id: 2,
+      id: 3,
+      title: "Researcher",
+      subtitle: "Advance Machine Intelligence Research Lab - AMIR Lab",
+      location: "New York",
+      period: "2023 - Present",
+      desc: "I work as a researcher at the Advanced Machine Intelligence Research Lab (AMIR-Lab), a global non-profit academic consortium dedicated to innovation and research excellence. The lab brings together leading academicians and scientists from universities and industries across different continents. My research focuses on deep learning and artificial intelligence, with an emphasis on developing intelligent systems and advancing real-world applications of AI.",
+    },
+    {
+      id: 4,
       title: "SQA Engineer",
       subtitle: "BizMotion Limited",
       location: "Dhaka",
@@ -98,7 +115,7 @@ const Experiences = () => {
       ],
     },
     {
-      id: 3,
+      id: 5,
       title: "Business Development Manager ",
       subtitle: "Rijuk Limited (www.iferi.com)",
       location: "Dhaka",
