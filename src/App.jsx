@@ -21,6 +21,8 @@ const App = () => {
     academics: useRef(null),
     experiences: useRef(null),
     publications: useRef(null),
+    awards: useRef(null),
+    memberships: useRef(null),
     certifications: useRef(null),
     features: useRef(null),
     footer: useRef(null),
@@ -54,7 +56,7 @@ const App = () => {
           {link.id === "experiences" && <Experiences />}
           {link.id === "publications" && <Publication />}
           {link.id === "awards" && <Awards />}
-          {link.id === "Memberships" && <Memberships />}
+          {link.id === "memberships" && <Memberships />}
           {link.id === "certifications" && <Certifications />}
           {link.id === "features" && (
             <Feature
