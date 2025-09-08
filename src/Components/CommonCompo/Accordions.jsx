@@ -52,15 +52,15 @@ export default function AccordionCustomIcon({ experienceData }) {
                     <h3 className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors duration-300 text-start">
                       {project.title}
                     </h3>
-                    <p className="text-lg text-gray-500">{project.subtitle}</p>
                     <p className="text-base text-gray-500">
-                      {project.location}
+                      {project.subtitle}
                     </p>
+                    <p className="text-sm text-gray-500">{project.location}</p>
                   </div>
 
                   {/* Period */}
 
-                  <span className="text-sm font-medium text-gray-500 tracking-wide text-start pr-5">
+                  <span className="text-sm font-medium text-gray-500 tracking-wide text-start pr-5 whitespace-nowrap">
                     {project.period}
                   </span>
                 </div>
@@ -90,11 +90,18 @@ export default function AccordionCustomIcon({ experienceData }) {
                   </button>
                 </div>
               </div> */}
-              <ol className="list-disc pl-5 space-y-2 text-base text-gray-800">
-                {project.orderlist.map((orderlist) => (
-                  <li key={orderlist.id}>{orderlist.task}</li>
-                ))}
-              </ol>
+              {project.title === "Founder & COO" ||
+              project.title === "Researcher" ? (
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  {project.desc}
+                </p>
+              ) : (
+                <ol className="list-disc pl-5 space-y-2 text-base text-gray-800">
+                  {project.orderlist.map((order) => (
+                    <li key={order.id}>{order.task}</li>
+                  ))}
+                </ol>
+              )}
             </AccordionBody>
           </div>
         </Accordion>

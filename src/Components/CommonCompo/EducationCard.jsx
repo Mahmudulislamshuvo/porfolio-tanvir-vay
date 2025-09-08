@@ -34,14 +34,14 @@ const EducationCard = ({
 
           <div className="mt-5 flex h-full w-full flex-col md:mt-0">
             {/* FIXED: Responsive text size and completed the gradient text effect */}
-            <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gray-500 md:text-2xl">
+            <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gray-700 md:text-2xl">
               {degree}
             </h3>
 
             {/* Institution with animated underline */}
             <div className="relative mt-2">
               {/* FIXED: Corrected text-md to text-base */}
-              <p className="text-base font-medium text-gray-700 inline-block">
+              <p className="text-base font-medium text-gray-500 inline-block">
                 {institution}
               </p>
               {group && (

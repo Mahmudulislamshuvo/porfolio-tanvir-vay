@@ -23,6 +23,7 @@ import certifcate7 from "../../assets/Certifications/7.jpeg";
 import certifcate8 from "../../assets/Certifications/8.png";
 import certifcate9 from "../../assets/Certifications/9.png";
 import certifcate10 from "../../assets/Certifications/10.png";
+import certifcate11 from "../../assets/Certifications/IRJMT-Reviewer-Certificate.png";
 
 export default function Slider() {
   const Data = [
@@ -40,48 +41,54 @@ export default function Slider() {
     },
     {
       id: 3,
+      image: certifcate11,
+      title:
+        "Certificate of Reviewing at the Asian Research Association (IRJMT)",
+    },
+    {
+      id: 4,
       image: certifcate3,
       title:
         "Certificate of Certified Salesforce Administrator from Salesforce.",
     },
     {
-      id: 4,
+      id: 5,
       image: certifcate4,
       title:
         "Certificate for 2025 Aspire Leaders Program from Aspire Institute.",
     },
     {
-      id: 5,
+      id: 6,
       image: certifcate5,
       title:
         "Certificate for Cyber Awareness for Digital Bangladesh from Digital Security Agency.",
     },
     {
-      id: 6,
+      id: 7,
       image: certifcate6,
       title:
         "Certificate for Information Technology Passport Examination (IP) of Information technology Engineers Examination (ITEE) from Bangladesh IT - engineers Examination Center (BD-ITEC) & Bangladesh Computer Council (BCC).",
     },
     {
-      id: 7,
+      id: 8,
       image: certifcate7,
       title:
         "Certificate for Acquiring Competencies for Employment (ACE) form Bangladesh Youth Leadership Center (BYLC).",
     },
     {
-      id: 8,
+      id: 9,
       image: certifcate8,
       title:
         "Certificate for 18th International Conference on Computer and Information Technology (ICCIT) from Department of CSE of Military Institute of Science and Technology.",
     },
     {
-      id: 9,
+      id: 10,
       image: certifcate9,
       title:
         "Certificate for Software Engineering Job Simulation (Wells Fargo) from Forage.",
     },
     {
-      id: 10,
+      id: 11,
       image: certifcate10,
       title:
         "Certificate for Data Science Job Simulation (British Airways) from Forage.",
