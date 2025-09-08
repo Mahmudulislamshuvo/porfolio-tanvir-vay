@@ -6,14 +6,15 @@ const Memberships = () => {
     {
       id: 1,
       title: "Editorial Board Member",
-      des: "Hashibul Shoaib has been recognized with a 2025 Global Recognition Award for his exceptional contributions to deep learning research...",
+      des: "Al-Kindi Publisher",
+      location: "London, UK",
       image: awardpic1,
       link: "https://al-kindipublisher.com/index.php/jcsts/about/editorialTeam",
     },
   ];
 
   return (
-    <div className="max-xs:px-3 max-xs:mx-0 sm:container sm:mx-auto sm:px-4 py-8">
+    <div className="max-xs:px-3 max-xs:mx-0 sm:container sm:mx-auto sm:px-4">
       {/* Added horizontal padding for mobile */}
       <div className="my-8">
         <div className="text-center">
@@ -29,6 +30,8 @@ const Memberships = () => {
               title={award.title}
               image={award.image}
               link={award.link}
+              des={award.des}
+              location={award.location}
             />
           ))}
         </div>

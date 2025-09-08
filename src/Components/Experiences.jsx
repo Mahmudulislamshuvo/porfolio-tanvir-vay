@@ -8,7 +8,7 @@ const Experiences = () => {
       subtitle: "PoshgigX LLC",
       location: "New York",
       period: "2025 - Present",
-      desc: "At PoshGigx, we love turning ideas into websites and apps that actually work for you. Whether it’s a personal site, an online store, or a business app, we build it with care so it looks good, runs smooth, and feels easy to use. Our goal is simple: help you get online and grow without the stress.",
+      desc: "PoshgigX.com, a startup software company based in New York, we love turning ideas into websites and apps that actually work for you. Whether it’s a personal site, an online store, or a business app, we build it with care so it looks good, runs smooth, and feels easy to use. Our goal is simple: help you get online and grow without the stress.",
     },
 
     {
@@ -74,7 +74,7 @@ const Experiences = () => {
     },
     {
       id: 4,
-      title: "SQA Engineer",
+      title: "Software Quality Assurance Engineer (SQA)",
       subtitle: "BizMotion Limited",
       location: "Dhaka",
       period: "2021 - 2023",

@@ -1,4 +1,4 @@
-const AwardCart = ({ title, des, image, link }) => {
+const AwardCart = ({ title, des, image, link, location }) => {
   return (
     <div className="w-full md:w-[48%] lg:w-[31%] flex flex-col border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 my-2 transition-transform transform hover:scale-105">
       {/* Image container */}
@@ -20,9 +20,20 @@ const AwardCart = ({ title, des, image, link }) => {
           {title}
         </h5>
 
-        <p className="mb-4 font-normal text-gray-700 dark:text-gray-400 flex-grow">
+        <p
+          className={
+            location
+              ? `font-normal text-gray-700 dark:text-gray-400 flex-grow`
+              : `mb-4 font-normal text-gray-700 dark:text-gray-400 flex-grow`
+          }
+        >
           {des}
         </p>
+        {location ?? (
+          <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
+            {location}
+          </p>
+        )}
 
         <a
           href={link}

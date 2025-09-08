@@ -13,7 +13,7 @@ const Awards = () => {
   ];
 
   return (
-    <div className="max-xs:px-3 max-xs:mx-0 sm:container sm:mx-auto sm:px-4 py-8">
+    <div className="max-xs:px-3 max-xs:mx-0 sm:container sm:mx-auto sm:px-4">
       {/* Added horizontal padding for mobile */}
       <div className="my-8">
         <div className="text-center">
